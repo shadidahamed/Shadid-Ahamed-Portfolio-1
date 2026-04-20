@@ -5,9 +5,10 @@
 }
 
 body {
-  font-family: 'Segoe UI';
+  font-family: system-ui, sans-serif;
   background: #0f172a;
   color: #e5e7eb;
+  line-height: 1.6;
 }
 
 /* HEADER */
@@ -15,46 +16,60 @@ header {
   position: sticky;
   top: 0;
   background: #020617;
-  padding: 1rem;
+  padding: 15px;
+  z-index: 1000;
+  text-align: center;
 }
 
 nav ul {
   display: flex;
-  gap: 1rem;
-  list-style: none;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 10px;
+  list-style: none;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
 }
 
 /* HERO */
 .hero {
   display: flex;
   justify-content: space-between;
-  padding: 2rem;
+  align-items: center;
+  padding: 40px;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-.hero-image {
-  width: 260px;
-  animation: slideIn 1s forwards;
-}
-
-@keyframes slideIn {
-  from { transform: translateX(200px); opacity: 0; }
-  to { transform: translateX(0); opacity: 1; }
+.hero img {
+  width: 250px;
+  max-width: 100%;
 }
 
 /* SECTIONS */
 section {
-  padding: 4rem 2rem;
-  max-width: 1100px;
+  padding: 60px 20px;
+  max-width: 1000px;
   margin: auto;
 }
 
-/* SKILLS SLIDER */
-.slide-track {
+/* SLIDER */
+.slider {
+  overflow: hidden;
+}
+
+.track {
   display: flex;
-  gap: 20px;
-  animation: scroll 20s linear infinite;
+  gap: 15px;
+  animation: scroll 18s linear infinite;
+}
+
+.track img {
+  width: 150px;
+  border-radius: 10px;
 }
 
 @keyframes scroll {
@@ -62,19 +77,25 @@ section {
   to { transform: translateX(-100%); }
 }
 
-/* CONTACT */
-.contact-item {
-  display: flex;
+/* CONTACT GRID */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 10px;
-  padding: 10px;
-  border: 1px solid #1e293b;
-  margin: 10px 0;
-  border-radius: 10px;
 }
 
-/* CV BUTTON */
-.cv-button {
-  padding: 10px 20px;
+.contact-grid a {
+  padding: 10px;
+  background: #1e293b;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+}
+
+/* BUTTON */
+a[download] {
+  display: inline-block;
+  padding: 10px 15px;
   background: #38bdf8;
   color: black;
   border-radius: 8px;
@@ -84,6 +105,11 @@ section {
 @media (max-width: 768px) {
   .hero {
     flex-direction: column;
-    align-items: center;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
   }
 }
+Write to Shadid Ahamed
