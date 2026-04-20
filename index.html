@@ -1,76 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> 
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Shadid Ahamed's Portfolio</title>
 
-<link rel="icon" href="image/portfolio link favicon.png" type="image/jpeg">
+<link rel="icon" href="image/portfolio link favicon.png" type="image/png">
 <link rel="stylesheet" href="styles.css">
 
-<!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-</head> 
+</head>
 
 <body>
 
 <header>
   <h1>Shadid Ahamed</h1>
+
   <nav>
     <ul>
-      <li><a href="#about">About Me</a></li>
+      <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
-      <li><a href="#educational">Educational Background</a></li>
+      <li><a href="#education">Education</a></li>
       <li><a href="#cv">CV</a></li>
     </ul>
   </nav>
 </header>
 
 <!-- HERO -->
-<div class="hero">
+<section class="hero">
   <div class="hero-text">
     <h2>Hi, I'm Shadid</h2>
     <p>Aspiring Web Developer • Visual Artist • Athlete</p>
   </div>
 
   <div class="hero-image">
-    <img src="image/Heroimage.png" alt="Shadid Ahamed">
+    <img src="image/Heroimage.png" alt="Shadid">
   </div>
-</div>
+</section>
 
 <!-- ABOUT -->
 <section id="about">
-  <div class="about-container">
+  <h2>About Me</h2>
 
-    <h2 class="about-title">About Me</h2>
+  <p>I’m <strong>Shadid Ahamed</strong>, based in Dhaka, Bangladesh.</p>
 
-    <p class="about-text">
-      I’m <span class="highlight">Shadid Ahamed</span>, a science-background student,
-      aspiring web developer, and visual artist based in Dhaka, Bangladesh.
-    </p>
+  <p>SSC (2023) – Motijheel Ideal School & College</p>
+  <p>HSC (2025) – Notre Dame College (Science) | GPA 5</p>
 
-    <p class="about-text">
-      I have completed my <strong>SSC (2023)</strong> from
-      <strong>Motijheel Ideal School and College</strong> and my
-      <strong>HSC (2025)</strong> from <strong>Notre Dame College (Group 1 – Science)</strong>,
-      achieving <strong>GPA 5</strong> in both.
-    </p>
-
-    <p class="about-text">
-      Currently, I am learning <strong>HTML, CSS, and JavaScript</strong>.
-    </p>
-
-    <ul class="about-list">
-      <li>Bangladesh Shishu Chitrankon Protijogita (Thana Level)</li>
-      <li>Bangladesh Shishu Chitrankon Protijogita (District Level)</li>
-      <li>International Art Exhibition by 'Shilper Chitro'</li>
-    </ul>
-
-  </div>
+  <p>Currently learning HTML, CSS, JavaScript.</p>
 </section>
 
 <!-- SKILLS -->
@@ -83,16 +64,14 @@
     <li>Drawing</li>
   </ul>
 
-  <div class="drawing-slider">
-    <div class="slide-track">
+  <div class="slider">
+    <div class="track">
       <img src="image/IMG scetch 1.jpg">
       <img src="image/image sketch 1.jpg">
       <img src="image/image sketch 2.jpg">
       <img src="image/image ipad 1.png">
       <img src="image/image colour 1.jpg">
       <img src="image/image pc 1.png">
-      <img src="image/image colour.jpg">
-      <img src="image/img 2.png">
       <img src="image/image sketch 3.jpg">
     </div>
   </div>
@@ -101,112 +80,86 @@
 <!-- EXPERIENCE -->
 <section id="experience">
   <h2>Experience</h2>
-  <div class="project">
-    <h3>Self-Learning Web Developer</h3>
-    <p>2025 – Present</p>
-  </div>
+  <p>Self-Learning Web Developer (2025 – Present)</p>
 </section>
 
 <!-- PROJECTS -->
 <section id="projects">
   <h2>Projects</h2>
-  <ul>
-    <li>
-      <h3>Project One</h3>
-      <p>A task tracking web app.</p>
-    </li>
-    <li>
-      <h3>Project Two</h3>
-      <p>E-commerce website for small businesses.</p>
-    </li>
-  </ul>
+
+  <div>
+    <h3>Task Tracker App</h3>
+    <p>Productivity web application.</p>
+  </div>
+
+  <div>
+    <h3>E-commerce Website</h3>
+    <p>Small business platform prototype.</p>
+  </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="contact-section">
-  <div class="contact-container">
+<section id="contact">
+  <h2>Contact</h2>
 
-    <h2 class="contact-title">Contact Me</h2>
+  <div class="contact-grid">
 
-    <div class="contact-links">
+    <a href="mailto:shadidahamed.matashome05m@gmail.com">
+      <i class="fa-solid fa-envelope"></i> Email
+    </a>
 
-      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=shadidahamed.matashome05m@gmail.com" target="_blank" class="contact-item">
-        <i class="fa-solid fa-envelope"></i>
-        <span>shadidahamed.matashome05m@gmail.com</span>
-      </a>
+    <a href="https://github.com/shadidahamed">
+      <i class="fa-brands fa-github"></i> GitHub
+    </a>
 
-      <a href="https://github.com/shadidahamed" target="_blank" class="contact-item">
-        <i class="fa-brands fa-github"></i>
-        <span>GitHub Portfolio</span>
-      </a>
+    <a href="https://www.linkedin.com/in/shadid-ahamed-41a0703b2/">
+      <i class="fa-brands fa-linkedin"></i> LinkedIn
+    </a>
 
-      <a href="https://www.linkedin.com/in/shadid-ahamed-41a0703b2/" target="_blank" class="contact-item">
-        <i class="fa-brands fa-linkedin"></i>
-        <span>Shadid Ahamed</span>
-      </a>
+    <a href="https://www.instagram.com/shade_ed25">
+      <i class="fa-brands fa-instagram"></i> Instagram
+    </a>
 
-      <a href="https://www.instagram.com/shade_ed25" target="_blank" class="contact-item">
-        <i class="fa-brands fa-instagram"></i>
-        <span>shadid0504</span>
-      </a>
+    <a href="https://www.facebook.com/share/1C2KcQfwvn/">
+      <i class="fa-brands fa-facebook"></i> Facebook
+    </a>
 
-      <a href="https://www.facebook.com/share/1C2KcQfwvn/" target="_blank" class="contact-item">
-        <i class="fa-brands fa-facebook"></i>
-        <span>Shadid Ahamed</span>
-      </a>
+    <a href="https://pin.it/4Z5y34R2T">
+      <i class="fa-brands fa-pinterest"></i> Pinterest
+    </a>
 
- <a href="https://pin.it/4Z5y34R2T" target="_blank" class="contact-item">
-        <i class="fa-brands fa-pinterest"></i>
-        <span>Pinterest</span>
-      </a>
-      
-      <a href="https://x.com/ShadidAhamed" target="_blank" class="contact-item">
-        <i class="fa-brands fa-x-twitter"></i>
-        <span>@Shadid Ahamed</span>
-      </a>
+    <a href="https://x.com/ShadidAhamed">
+      <i class="fa-brands fa-x-twitter"></i> X
+    </a>
 
-      <a href="@shadidahamed on Tumblr" target="_blank" class="contact-item">
-        <i class="fa-brands fa-tumbler"></i>
-        <span>Shadid Ahamed</span>
-      </a>
+    <a href="https://www.tumblr.com/">
+      <i class="fa-brands fa-tumblr"></i> Tumblr
+    </a>
 
-<a href="https://www.reddit.comu/Shade_ed25?utm_source=share&utm_medium=android_app&utm_name=androidcss&utm_term=1&utm_content=1" target="_blank" class="contact-item">
-        <i class="fa-brands fa-reddit"></i>
-        <span>Shade_ed25</span>
-      </a>
-      
-      <a href="https://wa.me/8801326162684" target="_blank" class="contact-item">
-        <i class="fa-brands fa-whatsapp"></i>
-        <span>+880 1326 162684</span>
-      </a>
+    <a href="https://www.reddit.com/user/Shade_ed25">
+      <i class="fa-brands fa-reddit"></i> Reddit
+    </a>
 
-    </div>
+    <a href="https://wa.me/8801326162684">
+      <i class="fa-brands fa-whatsapp"></i> WhatsApp
+    </a>
+
   </div>
 </section>
 
 <!-- EDUCATION -->
-<section id="educational">
-  <h2>Educational Background</h2>
-  <ul>
-    <li>
-      Old student of MOTIJHEEL IDEAL SCHOOL & COLLEGE
-      <p>2013–2023</p>
-    </li>
-    <li>
-      NOTRE DAME COLLEGE (Science)
-      <p>2023–2025</p>
-    </li>
-     <li>
-     Started studying at BRAC University"BACHELOR OF ARCHITECTURE (ARC)"
-      <p>2013–2023</p>
-    </li>
-  </ul>
+<section id="education">
+  <h2>Education</h2>
+
+  <p>Motijheel Ideal School & College (2013–2023)</p>
+  <p>Notre Dame College – Science (2023–2025)</p>
+  <p>BRAC University – Bachelor of Architecture (Ongoing)</p>
 </section>
 
 <!-- CV -->
 <section id="cv">
-  <h2>My CV</h2>
-  <a href="cv/Shadid_Ahamed_CV.pdf" download class="cv-button">Download CV</a>
+  <h2>CV</h2>
+  <a href="cv/Shadid_Ahamed_CV.pdf" download>Download CV</a>
 </section>
 
 <footer>
@@ -215,3 +168,4 @@
 
 </body>
 </html>
+Write to Shadid Ahamed
