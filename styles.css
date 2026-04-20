@@ -82,18 +82,39 @@ nav a:hover {
 
 /* BUTTON */
 .btn {
-  display: inline-block;
-  padding: 10px 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 22px;
+  border-radius: 999px;
   background: linear-gradient(135deg, #38bdf8, #0ea5e9);
-  color: black;
-  border-radius: 10px;
+  color: #020617;
+  font-weight: 600;
+  letter-spacing: 0.3px;
   text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
+  box-shadow: 0 8px 25px rgba(56,189,248,0.25);
+  transition: all 0.3s ease;
 }
 
 .btn:hover {
-  transform: scale(1.05);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(56,189,248,0.4);
+}
+
+/* NAV BUTTON FIX (important) */
+nav ul {
+  display: flex;
+  gap: 25px; /* more breathing space */
+  align-items: center;
+}
+
+nav a {
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+nav a:hover {
+  background: rgba(56,189,248,0.1);
 }
 
 /* SECTIONS */
