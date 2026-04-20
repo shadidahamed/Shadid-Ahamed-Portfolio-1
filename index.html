@@ -3,104 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Personal Profile</title>
 
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
+<link rel="icon" href="portfolio link favicon.png">
+<link rel="stylesheet" href="style.css">
 
-/* NAVBAR */
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 8px;
-  display: flex;
-  gap: 6px;
-  overflow-x: auto;
-  white-space: nowrap;
-  background: rgba(0,0,0,0.6); /* fallback for mobile */
-  z-index: 10;
-}
-
-.navbar::-webkit-scrollbar {
-  display: none;
-}
-
-.navbar button {
-  flex: 0 0 auto;
-  padding: 10px 14px;
-  border: none;
-  background: rgba(255,255,255,0.25);
-  color: white;
-  cursor: pointer;
-  border-radius: 6px;
-  font-size: 14px;
-}
-
-.navbar button:active {
-  background: rgba(255,255,255,0.5);
-  color: black;
-}
-
-/* HERO SECTION */
-.hero {
-  min-height: 100dvh;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  background: #111;
-  overflow: hidden;
-}
-
-/* PROFILE IMAGE */
-.profile-img {
-  width: 80vw;
-  max-width: 300px;
-  height: auto;
-  margin: 90px 15px;
-  transform: translateY(-100%);
-  animation: dropDown 1.2s ease forwards;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.6);
-  border-radius: 10px;
-}
-
-@keyframes dropDown {
-  to {
-    transform: translateY(0);
-  }
-}
-
-/* SECTIONS */
-.section {
-  display: none;
-  padding: 100px 15px 40px;
-  min-height: 100dvh;
-  background: #f4f4f4;
-  scroll-margin-top: 70px;
-}
-
-.active {
-  display: block;
-}
-
-/* RESPONSIVE TUNING */
-@media (min-width: 768px) {
-  .profile-img {
-    width: 300px;
-  }
-
-  .navbar {
-    justify-content: center;
-    overflow-x: visible;
-    flex-wrap: wrap;
-  }
-}
-</style>
 </head>
 
 <body>
@@ -118,21 +26,86 @@
   <button onclick="showSection('cv')">CV</button>
 </div>
 
+<!-- HERO -->
 <div class="hero">
-  <img src="your-image.jpg" alt="Profile" class="profile-img">
+  <img src="Heroimage.png" alt="Profile" class="profile-img">
 </div>
 
-<!-- CONTENT -->
-<div id="about" class="section active"><h2>About Me</h2></div>
-<div id="academic" class="section"><h2>Academic Background</h2></div>
-<div id="lifestyle" class="section"><h2>Lifestyle</h2></div>
-<div id="achievements" class="section"><h2>Achievements</h2></div>
-<div id="hobby" class="section"><h2>Hobby</h2></div>
-<div id="likes" class="section"><h2>Likes & Dislikes</h2></div>
-<div id="videos" class="section"><h2>Videos</h2></div>
-<div id="contacts" class="section"><h2>Contacts</h2></div>
-<div id="story" class="section"><h2>My Story</h2></div>
-<div id="cv" class="section"><h2>CV</h2></div>
+<!-- ABOUT -->
+<div id="about" class="section active">
+  <h2>About Me</h2>
+ 
+  <p>I am a passionate web developer learning modern technologies.</p>
+</div>
+
+<!-- ACADEMIC -->
+<div id="academic" class="section">
+  <h2>Academic Background</h2>
+  <p>Your academic details here.</p>
+</div>
+
+<!-- LIFESTYLE -->
+<div id="lifestyle" class="section">
+  <h2>Lifestyle</h2>
+  
+</div>
+
+<!-- ACHIEVEMENTS -->
+<div id="achievements" class="section">
+  <h2>Achievements</h2>
+
+</div>
+
+<!-- HOBBY -->
+<div id="hobby" class="section">
+  <h2>Hobby</h2>
+
+  <div class="slider">
+     <img src="IMG scetch 1.jpg" class="section-img">
+    <img src="image colour 1.jpg">
+    <img src="image colour.jpg">
+    <img src="Image-9.jpg" class="section-img">
+    <img src="image sketch 1.jpg">
+    <img src="image sketch 2.jpg">
+    <img src="image sketch 3.jpg">
+    <img src="image pc 1.png">
+    <img src="image ipad 1.png">
+  </div>
+
+</div>
+
+<!-- LIKES -->
+<div id="likes" class="section">
+  <h2>Likes & Dislikes</h2>
+</div>
+
+<!-- VIDEOS -->
+<div id="videos" class="section">
+  <h2>Videos</h2>
+
+
+
+</div>
+
+<!-- CONTACT -->
+<div id="contacts" class="section contact-bg">
+  <h2>Contact</h2>
+  <p>Email | Facebook | Portfolio</p>
+</div>
+
+<!-- STORY -->
+<div id="story" class="section">
+  <h2>My Story</h2>
+</div>
+
+<!-- CV -->
+<div id="cv" class="section">
+  <h2>CV</h2>
+
+  <img src="img 2.png">
+  <img src="img 4.png">
+
+</div>
 
 <script>
 function showSection(id) {
