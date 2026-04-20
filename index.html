@@ -1,125 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head> 
 
-<title>Personal Profile</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadid Ahamed's Portfolio</title>
+    <link rel="icon" href="image/portfolio link favicon.png" type="image/jpeg">
+    <link rel="stylesheet" href="styles.css">
+    
 
-<link rel="icon" href="portfolio link favicon.png">
-<link rel="stylesheet" href="style.css">
-
-</head>
-
+</head> 
 <body>
-
-<div class="navbar">
-  <button onclick="showSection('about')">About</button>
-  <button onclick="showSection('academic')">Academic</button>
-  <button onclick="showSection('lifestyle')">Lifestyle</button>
-  <button onclick="showSection('achievements')">Achievements</button>
-  <button onclick="showSection('hobby')">Hobby</button>
-  <button onclick="showSection('likes')">Likes</button>
-  <button onclick="showSection('videos')">Videos</button>
-  <button onclick="showSection('contacts')">Contact</button>
-  <button onclick="showSection('story')">Story</button>
-  <button onclick="showSection('cv')">CV</button>
-</div>
-
-<!-- HERO -->
-<div class="hero">
-  <img src="Heroimage.png" alt="Profile" class="profile-img">
-</div>
-
-<!-- ABOUT -->
-<div id="about" class="section active">
-  <h2>About Me</h2>
- 
-  <p>I am a passionate web developer learning modern technologies.</p>
-</div>
-
-<!-- ACADEMIC -->
-<div id="academic" class="section">
-  <h2>Academic Background</h2>
-  <p>Your academic details here.</p>
-</div>
-
-<!-- LIFESTYLE -->
-<div id="lifestyle" class="section">
-  <h2>Lifestyle</h2>
+    <header>
+        <h1>Shadid Ahamed</h1>
+        <nav>
   
-</div>
+            <ul>
+                <li>
+  <a href="#about">
+      About Me
+  </a>
+</li>
 
-<!-- ACHIEVEMENTS -->
-<div id="achievements" class="section">
-  <h2>Achievements</h2>
+<li>
+  <a href="#skills" onclick="document">
+    Skills
+  </a>
+</li>
 
-</div>
+<li>
+  <a href="#experience" onclick="document">
+    Experience
+  </a>
+</li>
+               
+<li>
+  <a href="#contact" onclick="document">
+    Contact
+  </a>
+</li>
 
-<!-- HOBBY -->
-<div id="hobby" class="section">
-  <h2>Hobby</h2>
-
-  <div class="slider">
-     <img src="IMG scetch 1.jpg" class="section-img">
-    <img src="image colour 1.jpg">
-    <img src="image colour.jpg">
-    <img src="Image-9.jpg" class="section-img">
-    <img src="image sketch 1.jpg">
-    <img src="image sketch 2.jpg">
-    <img src="image sketch 3.jpg">
-    <img src="image pc 1.png">
-    <img src="image ipad 1.png">
+<li>
+  <a href="#educational" onclick="document">
+    Educational Background
+  </a>
+</li>
+                
+            </ul>
+        </nav>
+    </header>
+          <div class="hero">
+  <div class="hero-text">
+    <h2>Hi, I'm Shadid</h2>
+    <p>Aspiring Web Developer • Visual Artist • Athlete</p>
   </div>
 
+  <div class="hero-image">
+    <img src=image/Heroimage.png  alt="Shadid Ahamed">
+  </div>
 </div>
 
-<!-- LIKES -->
-<div id="likes" class="section">
-  <h2>Likes & Dislikes</h2>
-</div>
+    <section class="about-section" id="about">
+  <div class="about-container">
 
-<!-- VIDEOS -->
-<div id="videos" class="section">
-  <h2>Videos</h2>
+    <h2 class="about-title">About Me</h2>
+
+    <p class="about-text">
+      I’m <span class="highlight">Shadid Ahamed</span>, a science-background student,
+      aspiring web developer, and visual artist based in Dhaka, Bangladesh.
+    </p>
+
+    <p class="about-text">
+      I have completed my <strong>SSC (2023)</strong> from
+      <strong>Motijheel Ideal School and College</strong> and my
+      <strong>HSC (2025)</strong> from <strong>Notre Dame College (Group 1 – Science)</strong>,
+      achieving <strong>GPA 5</strong> in both. My academic journey shaped my
+      analytical thinking, discipline, and consistency.
+    </p>
+
+    <p class="about-text">
+      Currently, I am learning <strong>HTML, CSS, and JavaScript</strong>,
+      focusing on building clean, structured, and responsive web interfaces.
+      I prefer learning through hands-on practice, sketching ideas, and real
+      experimentation.
+    </p>
+
+    <p class="about-text">
+      Alongside development, I am passionate about <strong>drawing and conceptual art</strong>.
+      I have earned recognition in:
+    </p>
+
+    <ul class="about-list">
+      <li>Bangladesh Shishu Chitrankon Protijogita (Thana Level)</li>
+      <li>Bangladesh Shishu Chitrankon Protijogita (District Level)</li>
+      <li>International Art Exhibation by 'Shilper Chitro'</li>
+    </ul>
+
+    <p class="about-text">
+      Beyond academics and creativity, I am also a <strong>long-distance runner</strong>.
+      I have completed the <strong>Mahanagar Half Marathon</strong> and earned
+      <strong>three finisher medals</strong>, reflecting endurance and mental resilience.
+    </p>
+
+    <p class="about-text final-line">
+      I aim to combine <strong>technology, creativity, and discipline</strong>
+      to build meaningful digital experiences and continuously grow as both
+      a developer and an artist.
+    </p>
+
+  </div>
+</section>
+
+   <section id="skills">
+  <h2>Skills</h2>
+
+  <ul>
+    <li>HTML / CSS</li>
+    <li>JavaScript</li>
+    <li>Drawing</li>
+  </ul>
+
+  <!-- Drawing Slider -->
+  <div class="drawing-slider">
+    <div class="slide-track">
+        <img src="image/IMG scetch 1.jpg">
+      <img src="image/image sketch 1.jpg">
+      <img src="image/image sketch 2.jpg">
+      <img src="image/image ipad 1.png">
+      <img src="image/image colour 1.jpg">
+      <img src="image/image pc 1.png">
+      <img src="image/image colour.jpg">
+      <img src="image/img 2.png">
+      <img src="image/image sketch 3.jpg">
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+  <div class="project">
+    <h3>Self-Learning Web Developer</h3>
+    <p>2025 – Present</p>
+    <p>Building responsive websites using HTML, CSS, and JavaScript. 
+    Focused on clean UI, animations, and structured layouts.</p>
+  </div>
+</section>
+    
+    <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+            <li>
+                <h3>Project One</h3>
+                <p>A web application that helps users track their daily tasks efficiently.</p>
+            </li>
+            <li>
+                <h3>Project Two</h3>
+                <p>An e-commerce website designed for small businesses to sell their products online.</p>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Font Awesome CDN (put once in your <head>) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<section id="contact" class="contact-section">
+  <div class="contact-container">
+
+    <h2 class="contact-title">Contact Me</h2>
+    <p class="contact-text">
+      If you'd like to get in touch, feel free to reach out through any platform below.
+    </p><div class="contact-links">
+   
+  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=shadidahamed.matashome05m@gmail.com"
+     target="_blank"
+     class="contact-item gmail-bg">
+
+    <i class="fa-solid fa-envelope"></i>
+    <span>shadidahamed.matashome05m@gmail.com</span>
+
+  </a>
+
+<a href="https://github.com/shadidahamed"
+   target="_blank"
+   class="contact-item github-bg">
+
+   <i class="fa-brands fa-github"></i>
+   <span>GitHub Portfolio</span>
+
+</a>
 
 
+<a href="https://www.linkedin.com/in/shadid-ahamed-41a0703b2/"
+   target="_blank"
+   class="contact-item linkedin-bg">
 
-</div>
+   <i class="fa-brands fa-linkedin"></i>
+   <span>Shadid Ahamed</span>
 
-<!-- CONTACT -->
-<div id="contacts" class="section contact-bg">
-  <h2>Contact</h2>
-  <p>Email | Facebook | Portfolio</p>
-</div>
+</a>
+        
+  <a href="https://www.instagram.com/shade_ed25"
+     target="_blank"
+     class="contact-item instagram-bg">
 
-<!-- STORY -->
-<div id="story" class="section">
-  <h2>My Story</h2>
-</div>
+    <i class="fa-brands fa-instagram"></i>
+    <span>@shade_ed25</span>
 
-<!-- CV -->
-<div id="cv" class="section">
-  <h2>CV</h2>
+  </a>
 
-  <img src="img 2.png">
-  <img src="img 4.png">
+  <a href="https://www.facebook.com/share/1C2KcQfwvn/"
+     target="_blank"
+     class="contact-item facebook-bg">
 
-</div>
+    <i class="fa-brands fa-facebook"></i>
+    <span>Facebook Profile</span>
 
-<script>
-function showSection(id) {
-  const sections = document.querySelectorAll('.section');
-  sections.forEach(sec => sec.classList.remove('active'));
+  </a>
 
-  document.getElementById(id).classList.add('active');
+<a href="https://x.com/Shade_ed25oni"
+   target="_blank"
+   class="contact-item x-bg">
 
-  window.scrollTo({
-    top: document.getElementById(id).offsetTop,
-    behavior: 'smooth'
-  });
-}
-</script>
+   <i class="fa-brands fa-x-twitter"></i>
+   <span>@Shade_ed25oni</span>
 
-</body>
+</a>
+        
+  <a href="https://wa.me/8801326162684"
+     target="_blank"
+     class="contact-item whatsapp-bg">
+
+    <i class="fa-brands fa-whatsapp"></i>
+    <span>+880 1326 162684</span>
+
+  </a>
+  </div>
+  </div>
+</section>
+    <section id="educational">
+        <h2>Educational Background</h2>
+        <ul>
+            <li>
+              Old student of 'MOTIGHEEL IDEAL SCHOOL & COLLEGE,Motijheel'
+<a href="https://share.google/ApM9CKcnPwpO0cYpv">ISC,Motijheel</a>
+<p> Studied at 'MOTIGHEEL IDEAL SCHOOL & COLLEGE,Motijheel'from 2013 to 2023.</p>
+
+            </li>
+            <li>
+              Studied at 'NOTRE DAME COLLEGE,DHAKA,BANGLADESH(Science)'
+<a href="https://share.google/MoeKkT0pkwMOY1RTg">NDC,Dhaka</a>
+<p>  Studied at 'NOTRE DAME COLLEGE,DHAKA,BANGLADESH' from 2023 to 2025.From science-background of Group-1</p>
+            </li>
+        </ul>
+        
+    </body>
+
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
