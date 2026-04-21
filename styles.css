@@ -12,20 +12,17 @@ body {
   line-height: 1.6;
 }
 
-/* CONTAINER */
-.container {
+/* GLOBAL */
+section {
   width: 90%;
   max-width: 1100px;
   margin: auto;
-}
-
-.section {
-  padding: 70px 0;
+  padding: 60px 0;
 }
 
 h2 {
   font-size: 28px;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 /* HEADER */
@@ -37,7 +34,10 @@ header {
   z-index: 1000;
 }
 
-.header {
+.header-container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -50,7 +50,7 @@ header {
 
 nav ul {
   display: flex;
-  gap: 20px;
+  gap: 18px;
   list-style: none;
 }
 
@@ -68,7 +68,7 @@ nav a:hover {
 .btn {
   background: #22c55e;
   color: black;
-  padding: 10px 18px;
+  padding: 8px 16px;
   border-radius: 999px;
   text-decoration: none;
   font-weight: 600;
@@ -87,7 +87,7 @@ nav a:hover {
 }
 
 .hero-text h2 {
-  font-size: 40px;
+  font-size: 38px;
 }
 
 .hero-text span {
@@ -95,7 +95,7 @@ nav a:hover {
 }
 
 .hero-image img {
-  width: 280px;
+  width: 260px;
   border-radius: 20px;
 }
 
@@ -104,40 +104,44 @@ nav a:hover {
   background: #1e293b;
   padding: 20px;
   border-radius: 15px;
+  margin-bottom: 15px;
 }
 
 /* SKILLS */
-.skills {
+#skills ul {
   display: flex;
-  gap: 15px;
+  gap: 10px;
   margin-bottom: 20px;
 }
 
-.skills li {
+#skills li {
   background: #1e293b;
-  padding: 8px 15px;
+  padding: 8px 14px;
   border-radius: 20px;
   list-style: none;
 }
 
-/* GRID */
-.grid-3 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+/* IMAGE SLIDER */
+.slider {
+  overflow: hidden;
 }
 
-.grid-2 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+.track {
+  display: flex;
+  gap: 10px;
 }
 
-/* PROJECT */
+.track img {
+  width: 120px;
+  border-radius: 10px;
+}
+
+/* PROJECT CARDS */
 .project-card {
   background: #1e293b;
   padding: 20px;
   border-radius: 15px;
+  margin-bottom: 15px;
   transition: 0.3s;
 }
 
@@ -157,6 +161,11 @@ nav a:hover {
   color: black;
   text-decoration: none;
   font-weight: 600;
+}
+
+.project-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(34,197,94,0.4);
 }
 
 /* VIDEO */
@@ -185,6 +194,10 @@ nav a:hover {
 .video-card:hover {
   background: #ff0000;
   transform: translateY(-5px);
+}
+
+.video-card:hover i {
+  color: white;
 }
 
 /* CONTACT */
@@ -225,11 +238,6 @@ footer {
 
   .hero-image img {
     width: 200px;
-  }
-
-  .grid-3,
-  .grid-2 {
-    grid-template-columns: 1fr;
   }
 
   nav ul {
