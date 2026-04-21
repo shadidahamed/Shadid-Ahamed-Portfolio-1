@@ -220,5 +220,19 @@ Live Demo
   <p>© 2026 Shadid<span>.</span> Built with focus & discipline</p>
 </footer>
 
+<script>
+function openImage(img){
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+
+  lightbox.style.display = "flex";
+  lightboxImg.src = img.src;
+}
+
+function closeImage(){
+  document.getElementById("lightbox").style.display = "none";
+}
+</script>
+  
 </body>
 </html>
