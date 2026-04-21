@@ -90,16 +90,24 @@ I build clean, accessible and responsive web interfaces with strong focus on usa
 </ul>
 
   <div class="skill-carousel">
-    <div class="skill-track">
-      <img src="image/IMG scetch 1.jpg">
-      <img src="image/image sketch 1.jpg">
-      <img src="image/image sketch 2.jpg">
-      <img src="image/image ipad 1.png">
-      <img src="image/image colour 1.jpg">
-      <img src="image/image pc 1.png">
-      <img src="image/image sketch 3.jpg">
-    </div>
+  <div class="skill-track">
+
+    <img src="image/IMG scetch 1.jpg" onclick="openImage(this)">
+    <img src="image/image sketch 1.jpg" onclick="openImage(this)">
+    <img src="image/image sketch 2.jpg" onclick="openImage(this)">
+    <img src="image/image ipad 1.png" onclick="openImage(this)">
+    <img src="image/image colour 1.jpg" onclick="openImage(this)">
+    <img src="image/image pc 1.png" onclick="openImage(this)">
+    <img src="image/image sketch 3.jpg" onclick="openImage(this)">
+
   </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" onclick="closeImage()">
+  <img id="lightbox-img">
+</div>
+ 
 </section>
 
 <!-- PROJECTS (FAANG CASE STUDIES STYLE) -->
