@@ -15,7 +15,7 @@
 <body>
 
 <header>
-  <div class="container header">
+  <div class="container header-container">
     <h1 class="logo">Shadid<span>.</span></h1>
 
     <nav>
@@ -33,7 +33,7 @@
   </div>
 </header>
 
-<section class="hero container reveal">
+<section class="hero container">
   <div class="hero-text">
     <h2>Hi, I'm <span>Shadid</span></h2>
     <p>Aspiring Web Developer • Visual Artist • Athlete</p>
@@ -45,27 +45,30 @@
   </div>
 </section>
 
-<section id="about" class="section container reveal">
+<section id="about" class="section container">
   <h2>About Me</h2>
   <div class="card">
-    <p>I am <strong>Shadid Ahamed</strong>, a passionate fresher based in Dhaka.</p>
+    <p>I am <strong>Shadid Ahamed</strong>, based in Dhaka.</p>
     <p>GPA 5.00 in SSC & HSC (Science).</p>
-    <p>Strong in English, Physics, public speaking & mentoring.</p>
+    <p>Strong in English, Physics & mentoring.</p>
     <p>Goal: Simplify complex concepts.</p>
   </div>
 </section>
 
-<section id="skills" class="section container reveal">
+<!-- SKILLS (FIXED PROPER SLIDER) -->
+<section id="skills" class="section container">
   <h2>Skills</h2>
 
   <ul class="skills">
-    <li>HTML / CSS</li>
+    <li>HTML</li>
+    <li>CSS</li>
     <li>JavaScript</li>
     <li>Drawing</li>
   </ul>
 
-  <div class="slider">
-    <div class="track">
+  <div class="skill-carousel">
+    <div class="skill-track">
+
       <img src="image/IMG scetch 1.jpg">
       <img src="image/image sketch 1.jpg">
       <img src="image/image sketch 2.jpg">
@@ -73,43 +76,77 @@
       <img src="image/image colour 1.jpg">
       <img src="image/image pc 1.png">
       <img src="image/image sketch 3.jpg">
+
     </div>
   </div>
 </section>
 
-<section id="experience" class="section container reveal">
+<section id="experience" class="section container">
   <h2>Experience</h2>
+
   <div class="grid-3">
-    <div class="card">...</div>
-    <div class="card">...</div>
-    <div class="card">...</div>
+    <div class="card"><h3>Teaching</h3><p>Physics & English guidance.</p></div>
+    <div class="card"><h3>Content Writing</h3><p>Educational explanations.</p></div>
+    <div class="card"><h3>Web Dev</h3><p>Building real projects.</p></div>
   </div>
 </section>
 
-<section id="projects" class="section container reveal">
+<section id="projects" class="section container">
   <h2>Projects</h2>
+
   <div class="grid-2">
-    <div class="project-card">...</div>
-    <div class="project-card">...</div>
+    <div class="project-card">
+      <h3>Task Tracker App</h3>
+      <p>Productivity tool.</p>
+    </div>
+
+    <div class="project-card">
+      <h3>E-commerce Website</h3>
+      <p>Modern business prototype.</p>
+      <a href="https://shadidahamed.github.io/trendcart/" class="project-btn">
+        View Project <i class="fa-solid fa-arrow-up-right-from-square"></i>
+      </a>
+    </div>
   </div>
 </section>
 
-<section id="videos" class="section container reveal">
+<section id="videos" class="section container">
   <h2>My Videos</h2>
-  <div class="video-grid">...</div>
+
+  <div class="video-grid">
+    <a href="https://www.youtube.com/" class="video-card">
+      <i class="fa-brands fa-youtube"></i><p>Video 1</p>
+    </a>
+    <a href="https://www.youtube.com/" class="video-card">
+      <i class="fa-brands fa-youtube"></i><p>Video 2</p>
+    </a>
+    <a href="https://www.youtube.com/" class="video-card">
+      <i class="fa-brands fa-youtube"></i><p>Video 3</p>
+    </a>
+  </div>
 </section>
 
-<section id="education" class="section container reveal">
+<section id="education" class="section container">
   <h2>Education</h2>
-  <div class="card">...</div>
+  <div class="card">
+    <p>Motijheel Ideal School & College</p>
+    <p>Notre Dame College</p>
+    <p>BRAC University (Ongoing)</p>
+  </div>
 </section>
 
-<section id="contact" class="section container reveal">
+<section id="contact" class="section container">
   <h2>Contact</h2>
-  <div class="contact-grid">...</div>
+
+  <div class="contact-grid">
+    <a href="mailto:shadidahamed.matashome05m@gmail.com">Email</a>
+    <a href="https://github.com/shadidahamed">GitHub</a>
+    <a href="https://www.linkedin.com/in/shadid-ahamed-41a0703b2/">LinkedIn</a>
+    <a href="https://www.instagram.com/shade_ed25">Instagram</a>
+  </div>
 </section>
 
-<section id="cv" class="section container center reveal">
+<section id="cv" class="section container center">
   <h2>CV</h2>
   <a href="https://linksharing.samsungcloud.com/ydyQQMfhxn3R" class="btn">Download CV</a>
 </section>
@@ -117,8 +154,6 @@
 <footer>
   <p>© 2026 Shadid<span>.</span></p>
 </footer>
-
-<script src="script.js"></script>
 
 </body>
 </html>
