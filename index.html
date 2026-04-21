@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Shadid Ahamed's Portfolio</title>
+<title>Shadid Ahamed Portfolio</title>
 
 <link rel="icon" href="image/portfolio link favicon.png" type="image/png">
 <link rel="stylesheet" href="styles.css">
@@ -15,7 +15,7 @@
 <body>
 
 <header>
-  <div class="header-container">
+  <div class="container header">
     <h1 class="logo">Shadid<span>.</span></h1>
 
     <nav>
@@ -24,9 +24,9 @@
         <li><a href="#skills">Skills</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#videos">My Videos</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#videos">Videos</a></li>
         <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
         <li><a href="#cv" class="btn">CV</a></li>
       </ul>
     </nav>
@@ -34,7 +34,7 @@
 </header>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero container">
   <div class="hero-text">
     <h2>Hi, I'm <span>Shadid</span></h2>
     <p>Aspiring Web Developer • Visual Artist • Athlete</p>
@@ -47,7 +47,7 @@
 </section>
 
 <!-- ABOUT -->
-<section id="about">
+<section id="about" class="section container">
   <h2>About Me</h2>
   <div class="card">
     <p>I am <strong>Shadid Ahamed</strong>, a passionate fresher based in Dhaka.</p>
@@ -58,10 +58,10 @@
 </section>
 
 <!-- SKILLS -->
-<section id="skills">
+<section id="skills" class="section container">
   <h2>Skills</h2>
 
-  <ul>
+  <ul class="skills">
     <li>HTML / CSS</li>
     <li>JavaScript</li>
     <li>Drawing</li>
@@ -81,51 +81,55 @@
 </section>
 
 <!-- EXPERIENCE -->
-<section id="experience">
+<section id="experience" class="section container">
   <h2>Experience</h2>
 
-  <div class="card">
-    <h3>Teaching & Mentoring</h3>
-    <p>Guided students in English & Physics.</p>
-  </div>
+  <div class="grid-3">
+    <div class="card">
+      <h3>Teaching & Mentoring</h3>
+      <p>Guided students in English & Physics.</p>
+    </div>
 
-  <div class="card">
-    <h3>Content Writing</h3>
-    <p>Clear educational explanations.</p>
-  </div>
+    <div class="card">
+      <h3>Content Writing</h3>
+      <p>Clear educational explanations.</p>
+    </div>
 
-  <div class="card">
-    <h3>Web Developer (2025–Present)</h3>
-    <p>Learning & building real projects.</p>
+    <div class="card">
+      <h3>Web Developer (2025–Present)</h3>
+      <p>Learning & building real projects.</p>
+    </div>
   </div>
 </section>
 
 <!-- PROJECTS -->
-<section id="projects">
+<section id="projects" class="section container">
   <h2>Projects</h2>
 
-  <div class="project-card">
-    <h3>Task Tracker App</h3>
-    <p>Productivity web application.</p>
-  </div>
+  <div class="grid-2">
 
-  <div class="project-card">
-    <h3>E-commerce Website</h3>
-    <p>Modern business prototype.</p>
+    <div class="project-card">
+      <h3>Task Tracker App</h3>
+      <p>Productivity web application.</p>
+    </div>
 
-    <a href="https://shadidahamed.github.io/trendcart/" target="_blank" class="project-btn">
-      View Project <i class="fa-solid fa-arrow-up-right-from-square"></i>
-    </a>
+    <div class="project-card">
+      <h3>E-commerce Website</h3>
+      <p>Modern business prototype.</p>
+
+      <a href="https://shadidahamed.github.io/trendcart/" target="_blank" class="project-btn">
+        View Project <i class="fa-solid fa-arrow-up-right-from-square"></i>
+      </a>
+    </div>
+
   </div>
 </section>
 
 <!-- VIDEOS -->
-<section id="videos">
+<section id="videos" class="section container">
   <h2>My Videos</h2>
 
   <div class="video-grid">
-
-    <!-- Replace with your links -->
     <a href="https://www.youtube.com/" target="_blank" class="video-card">
       <i class="fa-brands fa-youtube"></i>
       <p>Video Title 1</p>
@@ -140,12 +144,21 @@
       <i class="fa-brands fa-youtube"></i>
       <p>Video Title 3</p>
     </a>
+  </div>
+</section>
 
+<!-- EDUCATION -->
+<section id="education" class="section container">
+  <h2>Education</h2>
+  <div class="card">
+    <p>Motijheel Ideal School & College</p>
+    <p>Notre Dame College</p>
+    <p>BRAC University (Ongoing)</p>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact">
+<section id="contact" class="section container">
   <h2>Contact</h2>
 
   <div class="contact-grid">
@@ -156,22 +169,14 @@
   </div>
 </section>
 
-<!-- EDUCATION -->
-<section id="education">
-  <h2>Education</h2>
-  <p>Motijheel Ideal School & College</p>
-  <p>Notre Dame College</p>
-  <p>BRAC University (Ongoing)</p>
-</section>
-
 <!-- CV -->
-<section id="cv">
+<section id="cv" class="section container center">
   <h2>CV</h2>
   <a href="https://linksharing.samsungcloud.com/ydyQQMfhxn3R" class="btn">Download CV</a>
 </section>
 
 <footer>
-  <p>© 2026 Shadid Ahamed</p>
+  <p>© 2026 Shadid<span>.</span></p>
 </footer>
 
 </body>
