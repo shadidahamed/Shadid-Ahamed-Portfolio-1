@@ -253,6 +253,42 @@ gap:20px;
   transform:translateY(-3px);
 }
 
+.contact-icon-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+  gap:15px;
+}
+
+.contact-icon-grid a{
+  background:#111827;
+  padding:18px 10px;
+  border-radius:14px;
+  text-align:center;
+  text-decoration:none;
+  color:white;
+  border:1px solid rgba(255,255,255,0.05);
+  transition:0.3s;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:8px;
+}
+
+.contact-icon-grid i{
+  font-size:26px;
+  color:#22c55e;
+}
+
+.contact-icon-grid span{
+  font-size:13px;
+  color:#9ca3af;
+}
+
+.contact-icon-grid a:hover{
+  transform:translateY(-5px);
+  background:#1f2937;
+}
+
 /* FOOTER */
 footer{
 text-align:center;
