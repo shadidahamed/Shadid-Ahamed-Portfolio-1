@@ -91,20 +91,38 @@ border:1px solid rgba(255,255,255,0.05);
 }
 
 /* SKILLS */
-.skills{
-display:flex;
-flex-wrap:wrap;
-gap:10px;
-margin-bottom:20px;
+.skill-carousel{
+  overflow:hidden;
+  padding:25px 0;
+  width:100%;
 }
 
-.skills li{
-background:#1f2937;
-padding:8px 14px;
-border-radius:999px;
-font-size:13px;
+.skill-track{
+  display:flex;
+  gap:18px;
+  animation:scroll 22s linear infinite;
+  align-items:center;
+  width:max-content;
 }
 
+.skill-track img{
+  width:90px;
+  height:90px;
+  border-radius:50%;
+  object-fit:cover;
+  flex-shrink:0;
+  border:1px solid rgba(255,255,255,0.1);
+  transition:0.3s;
+}
+
+.skill-track img:hover{
+  transform:scale(1.15);
+}
+
+@keyframes scroll{
+  0%{transform:translateX(0);}
+  100%{transform:translateX(-50%);}
+}
 /* PROJECTS */
 .project-card{
 background:#111827;
