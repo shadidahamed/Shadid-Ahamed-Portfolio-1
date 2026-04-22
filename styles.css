@@ -22,6 +22,9 @@ margin:auto;
 padding:90px 0;
 }
 
+backdrop-filter: blur(12px);
+-webkit-backdrop-filter: blur(12px);
+
 /* HEADER */
 header{
 position:sticky;
