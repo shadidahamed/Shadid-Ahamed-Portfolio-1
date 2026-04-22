@@ -11,9 +11,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
-html{
-scroll-behavior:smooth;
-}
+html{scroll-behavior:smooth;}
 </style>
 
 </head>
@@ -29,18 +27,24 @@ scroll-behavior:smooth;
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Work</a></li>
+        <li><a href="#videos">Videos</a></li>
+        <li><a href="#experience">Experience</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li><a href="#cv" class="btn">CV</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
+<!-- HERO -->
 <section class="hero container">
   <div class="hero-text">
     <h2>I build fast, modern websites that help businesses grow</h2>
 
+    <p class="subtext">Frontend Developer • UI Specialist • Freelancer</p>
+
     <p class="description">
-    Clean, responsive and conversion-focused web solutions.
+      I create clean, responsive and conversion-focused websites for businesses and personal brands.
     </p>
 
     <a href="#contact" class="btn">Hire Me</a>
@@ -52,14 +56,26 @@ scroll-behavior:smooth;
   </div>
 </section>
 
+<!-- ABOUT -->
 <section id="about" class="section container">
   <h2>About</h2>
   <div class="card">
-    <p><strong>Shadid Ahamed</strong> — Frontend Developer from Bangladesh.</p>
+    <p><strong>Shadid Ahamed</strong> — Developer from Dhaka, Bangladesh.</p>
     <p>I focus on clarity, speed, and user experience.</p>
   </div>
 </section>
 
+<!-- SERVICES -->
+<section class="section container">
+  <h2>Services</h2>
+  <div class="grid-3">
+    <div class="card"><h3>Web Development</h3></div>
+    <div class="card"><h3>UI/UX Design</h3></div>
+    <div class="card"><h3>Optimization</h3></div>
+  </div>
+</section>
+
+<!-- SKILLS -->
 <section id="skills" class="section container">
   <h2>Skills</h2>
 
@@ -87,26 +103,111 @@ scroll-behavior:smooth;
   </div>
 </section>
 
+<!-- PROJECTS -->
 <section id="projects" class="section container">
   <h2>Selected Work</h2>
 
   <div class="grid-2">
     <div class="project-card">
       <h3>Task Tracker</h3>
-      <p>Simple productivity app UI.</p>
+      <p>Simple productivity web app UI.</p>
     </div>
 
     <div class="project-card">
       <h3>E-commerce Website</h3>
-      <p>Responsive storefront design.</p>
+      <p>Responsive storefront for business.</p>
       <a href="https://shadidahamed.github.io/trendcart/" class="btn">Live Demo</a>
     </div>
   </div>
 </section>
 
+<!-- VIDEOS (KEPT FULL) -->
+<section id="videos" class="section container">
+  <h2>My Videos</h2>
+
+  <div class="video-box-grid">
+    <div class="video-box"><h3>Video 1</h3><a href="#">Watch</a></div>
+    <div class="video-box"><h3>Video 2</h3><a href="#">Watch</a></div>
+    <div class="video-box"><h3>Video 3</h3><a href="#">Watch</a></div>
+  </div>
+</section>
+
+<!-- EXPERIENCE + EDUCATION -->
+<section id="experience" class="section container">
+  <h2>Experience & Education</h2>
+
+  <div class="grid-3">
+    <div class="card">
+      <h3>Academic Mentoring</h3>
+      <p>Physics & English tutoring for students.</p>
+    </div>
+
+    <div class="card">
+      <h3>Technical Communication</h3>
+      <p>Explaining complex topics simply.</p>
+    </div>
+
+    <div class="card">
+      <h3>Frontend Development</h3>
+      <p>Self-taught HTML, CSS, JS projects.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT (FULL RESTORED) -->
 <section id="contact" class="section container">
-  <h2>Contact</h2>
-  <a href="https://wa.me/8801326162684" class="btn">Message Me</a>
+  <h2>Contact & Links</h2>
+
+  <div class="contact-icon-grid">
+
+    <a href="mailto:shadidahamed.matashome05m@gmail.com" class="contact-card primary">
+      <i class="fa-solid fa-envelope"></i>
+      <span>Email</span>
+    </a>
+
+    <a href="https://wa.me/8801326162684" class="contact-card highlight">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span>WhatsApp</span>
+    </a>
+
+    <a href="https://github.com/shadidahamed" class="contact-card">
+      <i class="fa-brands fa-github"></i>
+      <span>GitHub</span>
+    </a>
+
+    <a href="https://www.linkedin.com/in/shadid-ahamed-41a0703b2/" class="contact-card">
+      <i class="fa-brands fa-linkedin"></i>
+      <span>LinkedIn</span>
+    </a>
+
+    <a href="https://www.instagram.com/shade_ed25" class="contact-card">
+      <i class="fa-brands fa-instagram"></i>
+      <span>Instagram</span>
+    </a>
+
+    <a href="https://x.com/ShadidAhamed" class="contact-card">
+      <i class="fa-brands fa-x-twitter"></i>
+      <span>X</span>
+    </a>
+
+    <a href="https://www.reddit.com/user/Shade_ed25" class="contact-card">
+      <i class="fa-brands fa-reddit"></i>
+      <span>Reddit</span>
+    </a>
+
+    <a href="https://pin.it/4Z5y34R2T" class="contact-card">
+      <i class="fa-brands fa-pinterest"></i>
+      <span>Pinterest</span>
+    </a>
+
+  </div>
+</section>
+
+<!-- CV -->
+<section id="cv" class="section container center">
+  <h2>Resume</h2>
+  <p>Download my CV for full details</p>
+  <a href="https://linksharing.samsungcloud.com/ydyQQMfhxn3R" class="btn">Download CV</a>
 </section>
 
 <footer>
@@ -122,37 +223,39 @@ scroll-behavior:smooth;
   <a href="#about"><i class="fa-solid fa-user"></i></a>
   <a href="#skills"><i class="fa-solid fa-code"></i></a>
   <a href="#projects"><i class="fa-solid fa-briefcase"></i></a>
+  <a href="#videos"><i class="fa-solid fa-video"></i></a>
+  <a href="#experience"><i class="fa-solid fa-chart-line"></i></a>
   <a href="#contact"><i class="fa-solid fa-envelope"></i></a>
 </div>
 
 <script>
 function toggleMenu(){
-  document.getElementById("mobileMenu").classList.toggle("active");
+document.getElementById("mobileMenu").classList.toggle("active");
 }
 
 function openImage(img){
-  document.getElementById("lightbox").style.display="flex";
-  document.getElementById("lightbox-img").src=img.src;
+document.getElementById("lightbox").style.display="flex";
+document.getElementById("lightbox-img").src=img.src;
 }
 
 function closeImage(){
-  document.getElementById("lightbox").style.display="none";
+document.getElementById("lightbox").style.display="none";
 }
 
-/* SCROLL ANIMATION */
-const elements = document.querySelectorAll(".card, .project-card");
+/* SCROLL REVEAL */
+const elements=document.querySelectorAll(".card,.project-card,.video-box");
 
-const observer = new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      entry.target.classList.add("show");
-    }
-  });
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(e=>{
+if(e.isIntersecting){
+e.target.classList.add("show");
+}
+});
 });
 
 elements.forEach(el=>{
-  el.classList.add("hidden");
-  observer.observe(el);
+el.classList.add("hidden");
+observer.observe(el);
 });
 </script>
 
