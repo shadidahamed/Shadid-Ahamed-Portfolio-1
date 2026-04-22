@@ -29,10 +29,7 @@ scroll-behavior:smooth;
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Work</a></li>
-        <li><a href="#videos">My Videos</a></li>
-        <li><a href="#experience">Experience</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><a href="#cv" class="btn">CV</a></li>
       </ul>
     </nav>
   </div>
@@ -40,14 +37,10 @@ scroll-behavior:smooth;
 
 <section class="hero container">
   <div class="hero-text">
-    <h2>I build fast, modern websites that help businesses grow and convert visitors into customers</h2>
-
-    <p class="subtext">
-    Frontend Developer • UI Specialist • Performance Focused
-    </p>
+    <h2>I build fast, modern websites that help businesses grow</h2>
 
     <p class="description">
-    I help small businesses and personal brands create clean, responsive websites that improve user experience and increase conversions.
+    Clean, responsive and conversion-focused web solutions.
     </p>
 
     <a href="#contact" class="btn">Hire Me</a>
@@ -62,17 +55,8 @@ scroll-behavior:smooth;
 <section id="about" class="section container">
   <h2>About</h2>
   <div class="card">
-    <p>I am <strong>Shadid Ahamed</strong>, a self-driven developer from Dhaka, Bangladesh.</p>
-    <p>My strength is clarity — I focus on making things understandable, fast, and responsive.</p>
-  </div>
-</section>
-
-<section id="services" class="section container">
-  <h2>What I Can Do For You</h2>
-  <div class="grid-3">
-    <div class="card"><h3>Website Development</h3></div>
-    <div class="card"><h3>UI/UX Design</h3></div>
-    <div class="card"><h3>Optimization</h3></div>
+    <p><strong>Shadid Ahamed</strong> — Frontend Developer from Bangladesh.</p>
+    <p>I focus on clarity, speed, and user experience.</p>
   </div>
 </section>
 
@@ -80,11 +64,10 @@ scroll-behavior:smooth;
   <h2>Skills</h2>
 
   <ul class="skills">
-    <li>Frontend Development</li>
-    <li>Responsive Web Design</li>
     <li>HTML5</li>
     <li>CSS3</li>
     <li>JavaScript</li>
+    <li>Responsive Design</li>
   </ul>
 
   <div class="skill-carousel">
@@ -110,24 +93,24 @@ scroll-behavior:smooth;
   <div class="grid-2">
     <div class="project-card">
       <h3>Task Tracker</h3>
-      <p>Simple productivity UI for managing tasks.</p>
+      <p>Simple productivity app UI.</p>
     </div>
 
     <div class="project-card">
       <h3>E-commerce Website</h3>
-      <p>Responsive storefront design for businesses.</p>
+      <p>Responsive storefront design.</p>
       <a href="https://shadidahamed.github.io/trendcart/" class="btn">Live Demo</a>
     </div>
   </div>
 </section>
 
-<section id="contact" class="section container center">
+<section id="contact" class="section container">
   <h2>Contact</h2>
   <a href="https://wa.me/8801326162684" class="btn">Message Me</a>
 </section>
 
 <footer>
-  <p>© 2026 Shadid<span>.</span></p>
+  <p>© 2026 Shadid.</p>
 </footer>
 
 <!-- FLOAT MENU -->
@@ -144,23 +127,6 @@ scroll-behavior:smooth;
 
 <script>
 function toggleMenu(){
-document.getElementById("mobileMenu").classList.toggle("active");
-}
-
-function openImage(img){
-document.getElementById("lightbox").style.display="flex";
-document.getElementById("lightbox-img").src=img.src;
-}
-
-function closeImage(){
-document.getElementById("lightbox").style.display="none";
-}
-</script>
-
-<script>
-
-// your existing code
-function toggleMenu(){
   document.getElementById("mobileMenu").classList.toggle("active");
 }
 
@@ -173,27 +139,22 @@ function closeImage(){
   document.getElementById("lightbox").style.display="none";
 }
 
-
-/* 🔥 ADD THIS BELOW */
-const elements = document.querySelectorAll(".card, .project-card, .video-box");
+/* SCROLL ANIMATION */
+const elements = document.querySelectorAll(".card, .project-card");
 
 const observer = new IntersectionObserver(entries=>{
   entries.forEach(entry=>{
     if(entry.isIntersecting){
-      entry.target.style.opacity = "1";
-      entry.target.style.transform = "translateY(0)";
+      entry.target.classList.add("show");
     }
   });
 });
 
 elements.forEach(el=>{
-  el.style.opacity = "0";
-  el.style.transform = "translateY(30px)";
-  el.style.transition = "all 0.6s ease";
+  el.classList.add("hidden");
   observer.observe(el);
 });
-
 </script>
-  
+
 </body>
 </html>
