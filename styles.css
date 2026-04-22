@@ -1,3 +1,7 @@
+html{
+  scroll-behavior:smooth;
+}
+
 *{
 margin:0;
 padding:0;
@@ -5,9 +9,23 @@ box-sizing:border-box;
 font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
 }
 
+/* GLOBAL DEPTH */
 body{
-background:#0b0f19;
-color:#e5e7eb;
+  background: radial-gradient(circle at top, #111827, #0b0f19);
+}
+
+/* CARD UPGRADE */
+.card, .project-card, .video-box{
+  background: linear-gradient(145deg, #111827, #0b0f19);
+  box-shadow: 
+    0 10px 30px rgba(0,0,0,0.4),
+    inset 0 0 10px rgba(255,255,255,0.02);
+}
+
+/* HOVER LIFT */
+.card:hover, .project-card:hover, .video-box:hover{
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
 }
 
 .container{
@@ -16,8 +34,20 @@ max-width:1100px;
 margin:auto;
 }
 
-.section{
-padding:80px 0;
+.section h2{
+  font-size:28px;
+  margin-bottom:25px;
+  position:relative;
+}
+
+.section h2::after{
+  content:"";
+  width:50px;
+  height:3px;
+  background:#22c55e;
+  position:absolute;
+  bottom:-8px;
+  left:0;
 }
 
 header{
@@ -53,7 +83,12 @@ gap:40px;
 }
 
 .hero-text h2{
-font-size:38px;
+  font-size:42px;
+  line-height:1.2;
+  font-weight:700;
+  background: linear-gradient(90deg, #fff, #9ca3af);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hero-image img{
@@ -79,21 +114,26 @@ grid-template-columns:1fr 1fr 1fr;
 gap:20px;
 }
 
-.btn{
-background:#22c55e;
-padding:10px 18px;
-border-radius:999px;
-color:#000;
-text-decoration:none;
-display:inline-block;
-margin-top:10px;
-}
-
 .btn.secondary{
 background:transparent;
 border:1px solid #22c55e;
 color:#22c55e;
 margin-left:10px;
+}
+
+.btn{
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color:#000;
+  padding:12px 22px;
+  border-radius:999px;
+  font-weight:600;
+  letter-spacing:0.3px;
+  transition:0.3s;
+}
+
+.btn:hover{
+  transform:translateY(-3px) scale(1.03);
+  box-shadow:0 10px 25px rgba(34,197,94,0.4);
 }
 
 /* FLOAT MENU */
@@ -142,14 +182,20 @@ color:#22c55e;
 /* MOBILE */
 @media(max-width:768px){
 
-.hero{
-flex-direction:column;
-text-align:center;
+.hero-text h2{
+  font-size:26px;
 }
 
-.hero-text h2{
-font-size:26px;
+.section{
+  padding:60px 0;
 }
+
+.card{
+  padding:18px;
+}
+
+}
+
 
 .grid-2,.grid-3{
 grid-template-columns:1fr;
@@ -162,4 +208,15 @@ display:none;
 .mobile-menu-btn{
 display:flex;
 }
+}
+
+.skill-track img{
+  filter: grayscale(40%);
+  opacity:0.8;
+}
+
+.skill-track img:hover{
+  filter: grayscale(0%);
+  opacity:1;
+  transform:scale(1.2);
 }
