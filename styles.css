@@ -15,23 +15,13 @@ body{
   scroll-behavior:smooth;
 }
 
-a{
-  text-decoration:none;
-  color:inherit;
-}
+a{ text-decoration:none; color:inherit; }
 
 /* =====================
-   CONTAINER
+   CONTAINER & HEADER
 ===================== */
-.container{
-  width:90%;
-  max-width:1100px;
-  margin:auto;
-}
+.container{ width:90%; max-width:1100px; margin:auto; }
 
-/* =====================
-   HEADER
-===================== */
 header{
   background:#111827;
   padding:15px 0;
@@ -46,14 +36,8 @@ header{
   align-items:center;
 }
 
-.logo{
-  font-size:24px;
-  font-weight:bold;
-}
-
-.logo span{
-  color:#38bdf8;
-}
+.logo{ font-size:24px; font-weight:bold; }
+.logo span{ color:#38bdf8; }
 
 nav ul{
   display:flex;
@@ -61,13 +45,7 @@ nav ul{
   list-style:none;
 }
 
-nav ul li a{
-  transition:0.3s;
-}
-
-nav ul li a:hover{
-  color:#38bdf8;
-}
+nav ul li a:hover{ color:#38bdf8; }
 
 .btn{
   background:#38bdf8;
@@ -88,28 +66,14 @@ nav ul li a:hover{
   gap:40px;
 }
 
-.hero-text h2{
-  font-size:32px;
-  margin-bottom:10px;
-}
-
-.hero-text p{
-  opacity:0.8;
-  margin-bottom:20px;
-}
-
-.hero-image img{
-  width:300px;
-  border-radius:20px;
-}
+.hero-text h2{ font-size:32px; margin-bottom:10px; }
+.hero-text p{ opacity:0.8; margin-bottom:20px; }
+.hero-image img{ width:300px; border-radius:20px; }
 
 /* =====================
    SECTIONS
 ===================== */
-.section{
-  padding:60px 0;
-}
-
+.section{ padding:60px 0; }
 .section h2{
   text-align:center;
   margin-bottom:30px;
@@ -119,26 +83,19 @@ nav ul li a:hover{
 /* =====================
    SKILLS CAROUSEL
 ===================== */
-.skill-carousel{
-  overflow:hidden;
-}
-
+.skill-carousel{ overflow:hidden; }
 .skill-track{
   display:flex;
   gap:20px;
   animation:scroll 15s linear infinite;
 }
-
 .skill-track img{
   width:120px;
   border-radius:10px;
   cursor:pointer;
   transition:0.3s;
 }
-
-.skill-track img:hover{
-  transform:scale(1.1);
-}
+.skill-track img:hover{ transform:scale(1.1); }
 
 @keyframes scroll{
   0%{transform:translateX(0);}
@@ -146,7 +103,7 @@ nav ul li a:hover{
 }
 
 /* =====================
-   PROJECTS
+   PROJECTS & VIDEOS
 ===================== */
 .grid-2{
   display:grid;
@@ -160,10 +117,7 @@ nav ul li a:hover{
   border-radius:12px;
   transition:0.3s;
 }
-
-.project-card:hover{
-  transform:translateY(-5px);
-}
+.project-card:hover{ transform:translateY(-5px); }
 
 .project-btn{
   display:inline-block;
@@ -174,9 +128,6 @@ nav ul li a:hover{
   color:#000;
 }
 
-/* =====================
-   VIDEOS
-===================== */
 .video-box-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
@@ -190,14 +141,8 @@ nav ul li a:hover{
   text-align:center;
 }
 
-.video-box a{
-  display:inline-block;
-  margin-top:10px;
-  color:#38bdf8;
-}
-
 /* =====================
-   CONTACT GRID
+   CONTACT
 ===================== */
 .contact-box-grid{
   display:grid;
@@ -205,14 +150,12 @@ nav ul li a:hover{
   gap:15px;
   text-align:center;
 }
-
 .contact-box-grid a{
   background:#1f2937;
   padding:12px;
   border-radius:10px;
   transition:0.3s;
 }
-
 .contact-box-grid a:hover{
   background:#38bdf8;
   color:#000;
@@ -223,17 +166,14 @@ nav ul li a:hover{
 ===================== */
 #lightbox{
   position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
+  top:0; left:0;
+  width:100%; height:100%;
   background:rgba(0,0,0,0.9);
   display:none;
   justify-content:center;
   align-items:center;
   z-index:2000;
 }
-
 #lightbox img{
   max-width:90%;
   max-height:80%;
@@ -241,124 +181,22 @@ nav ul li a:hover{
 }
 
 /* =====================
-   CV SECTION
-===================== */
-.center{
-  text-align:center;
-}
-
-/* =====================
-   AI BOX
-===================== */
-.ai-btn{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#38bdf8;
-  padding:15px;
-  border-radius:50%;
-  cursor:pointer;
-  font-size:20px;
-  z-index:3000;
-}
-
-.ai-box{
-  position:fixed;
-  bottom:80px;
-  right:20px;
-  width:250px;
-  height:300px;
-  background:#111827;
-  border-radius:10px;
-  display:none;
-  flex-direction:column;
-  z-index:3000;
-}
-
-.ai-header{
-  background:#38bdf8;
-  padding:10px;
-  color:#000;
-  font-weight:bold;
-}
-
-.ai-body{
-  flex:1;
-  padding:10px;
-  overflow:auto;
-  font-size:14px;
-}
-
-.ai-box input{
-  padding:10px;
-  border:none;
-  outline:none;
-  width:100%;
-}
-
-.ai-hints{
-  padding:10px;
-  font-size:12px;
-  opacity:0.8;
-}
-
-.ai-hints button{
-  margin:5px 3px;
-  padding:5px 8px;
-  font-size:12px;
-  border:none;
-  border-radius:5px;
-  cursor:pointer;
-  background:#38bdf8;
-  color:#000;
-}
-
-/* =====================
-   ANIMATION
+   REVEAL ANIMATION
 ===================== */
 .reveal{
   opacity:0;
   transform:translateY(30px);
   transition:0.6s ease;
 }
-
 .reveal.show{
   opacity:1;
   transform:translateY(0);
 }
+.hidden { display: none !important; } /* Safety for observer */
 
 /* =====================
-   MOBILE RESPONSIVE
+   AI ASSISTANT (Clean & Fixed)
 ===================== */
-@media(max-width:768px){
-
-  .hero{
-    flex-direction:column;
-    text-align:center;
-  }
-
-  .grid-2{
-    grid-template-columns:1fr;
-  }
-
-  .video-box-grid{
-    grid-template-columns:1fr;
-  }
-
-  .contact-box-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  nav ul{
-    flex-wrap:wrap;
-    justify-content:center;
-  }
-}
-
-/* =====================
-   AI ASSISTANT - Professional & Mobile Friendly
-===================== */
-
 .ai-btn {
   position: fixed;
   bottom: 20px;
@@ -399,7 +237,6 @@ nav ul li a:hover{
   z-index: 3000;
 }
 
-/* Mobile Optimization */
 @media (max-width: 480px) {
   #aiBox {
     width: 92vw;
@@ -407,7 +244,6 @@ nav ul li a:hover{
     bottom: 80px;
     right: 4%;
     left: 4%;
-    border-radius: 16px;
   }
 }
 
@@ -422,7 +258,7 @@ nav ul li a:hover{
   justify-content: space-between;
 }
 
-.ai-header .close-btn {
+.close-btn {
   background: none;
   border: none;
   font-size: 24px;
@@ -431,92 +267,6 @@ nav ul li a:hover{
   opacity: 0.8;
 }
 
-.ai-header .close-btn:hover {
-  opacity: 1;
-}
-
 #aiMessages {
   flex: 1;
   padding: 20px;
-  overflow-y: auto;
-  background: #0f172a;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  scrollbar-width: thin;
-  scrollbar-color: #38bdf8 #1e2937;
-}
-
-.ai-message {
-  max-width: 85%;
-  padding: 12px 16px;
-  border-radius: 16px;
-  line-height: 1.5;
-  font-size: 15px;
-  animation: messagePop 0.3s ease forwards;
-}
-
-.ai-message.user {
-  background: #38bdf8;
-  color: #000;
-  align-self: flex-end;
-  border-bottom-right-radius: 4px;
-}
-
-.ai-message.bot {
-  background: #1e2937;
-  color: #e2e8f0;
-  align-self: flex-start;
-  border-bottom-left-radius: 4px;
-}
-
-@keyframes messagePop {
-  from { opacity: 0; transform: translateY(15px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-#aiInputContainer {
-  padding: 16px;
-  background: #111827;
-  border-top: 1px solid #334155;
-}
-
-#aiInput {
-  width: 100%;
-  padding: 14px 18px;
-  background: #1e2937;
-  border: 1px solid #475569;
-  border-radius: 9999px;
-  color: #fff;
-  font-size: 15px;
-  outline: none;
-}
-
-#aiInput:focus {
-  border-color: #38bdf8;
-  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
-}
-
-.ai-hints {
-  padding: 0 16px 12px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-}
-
-.ai-hints button {
-  background: #1e2937;
-  color: #cbd5e1;
-  border: 1px solid #475569;
-  padding: 6px 12px;
-  border-radius: 9999px;
-  font-size: 12.5px;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.ai-hints button:hover {
-  background: #38bdf8;
-  color: #000;
-  border-color: #38bdf8;
-}
