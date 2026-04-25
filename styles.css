@@ -108,6 +108,16 @@ transition:0.3s;
   object-fit:contain;
 }
 
+@media(max-width:768px){
+  #lightbox{
+    padding:10px;
+  }
+
+  #lightbox img{
+    max-height:85vh;
+  }
+}
+
 /* FLOAT MENU */
 .mobile-menu-btn{
   position:fixed;
