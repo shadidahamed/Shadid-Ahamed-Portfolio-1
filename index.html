@@ -310,6 +310,18 @@ if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('sw.js');
 }
 </script>
-  
+
+
+<div class="ai-btn" onclick="toggleAI()">
+  🤖
+</div>
+
+<div class="ai-box" id="aiBox">
+  <div class="ai-header">Ask Me</div>
+  <div class="ai-body" id="aiMessages"></div>
+  <input type="text" id="aiInput" placeholder="Ask something..." onkeydown="handleAI(event)">
+</div>
+
+ 
 </body>
 </html>
