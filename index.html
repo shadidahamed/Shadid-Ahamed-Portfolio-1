@@ -319,6 +319,12 @@ if ('serviceWorker' in navigator) {
 <div class="ai-box" id="aiBox">
   <div class="ai-header">Ask Me</div>
   <div class="ai-body" id="aiMessages"></div>
+ <div class="ai-suggestions">
+  <button onclick="quickAsk('hire')">💼 Hire you</button>
+  <button onclick="quickAsk('skills')">🧠 Skills</button>
+  <button onclick="quickAsk('project')">📁 Projects</button>
+  <button onclick="quickAsk('contact')">📞 Contact</button>
+</div>
   <input type="text" id="aiInput" placeholder="Ask something..." onkeydown="handleAI(event)">
 </div>
  <script src="ai.js"></script>
