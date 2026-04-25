@@ -44,40 +44,35 @@ function handleAI(event){
 }
 
 /* SIMPLE AI LOGIC (RULE-BASED) */
-function getAIResponse(input){
+function generateReply(msg) {
 
-  let msg = input.toLowerCase();
-
-  // greetings
-  if(msg.includes("hi") || msg.includes("hello")){
-    return "Hello 👋 I'm your portfolio AI assistant!";
+  if (msg.includes("who are you")) {
+    return "I'm your portfolio AI assistant. Ask about skills, projects, or contact.";
   }
 
-  // portfolio help
-  if(msg.includes("project")){
-    return "You have Task Tracker and E-commerce TrendCart project.";
+  if (msg.includes("what can i ask")) {
+    return "Try: skills, projects, contact, or hiring.";
   }
 
-  // skills
-  if(msg.includes("skill")){
-    return "You know HTML, CSS, JavaScript and Frontend Development.";
+  if (msg.includes("hire") || msg.includes("job")) {
+    return "You can contact me via Email or WhatsApp in the Contact section.";
   }
 
-  // cv
-  if(msg.includes("cv") || msg.includes("resume")){
-    return "You can download your CV from the CV section below.";
+  if (msg.includes("skill")) {
+    return "I work with HTML, CSS, JavaScript, and UI Design.";
   }
 
-  // contact
-  if(msg.includes("contact") || msg.includes("email")){
-    return "You can contact via Email, GitHub, LinkedIn or WhatsApp.";
+  if (msg.includes("project")) {
+    return "Check the Projects section for live demos.";
   }
 
-  // motivation
-  if(msg.includes("motivate") || msg.includes("help")){
-    return "Keep going 💪 You are building a strong developer portfolio!";
+  if (msg.includes("contact")) {
+    return "Scroll to Contact section — all links are there.";
   }
 
-  // default
-  return "I am still learning 🤖 Ask about projects, skills or contact.";
+  return "Ask me about skills, projects, contact, or hiring 👇";
 }
+
+
+
+
