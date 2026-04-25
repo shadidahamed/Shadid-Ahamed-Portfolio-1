@@ -254,7 +254,6 @@ nav{display:none;}
   border-radius:12px;
   display:none;
   flex-direction:column;
-  overflow:hidden;
 }
 
 .ai-header{
