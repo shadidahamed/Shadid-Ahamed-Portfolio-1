@@ -1,8 +1,12 @@
 function toggleAI(){
   const box = document.getElementById("aiBox");
-  box.style.display = box.style.display === "flex" ? "none" : "flex";
-}
 
+  if(box.style.display === "flex"){
+    box.style.display = "none";
+  } else {
+    box.style.display = "flex";
+  }
+}
 function handleAI(e){
   if(e.key === "Enter"){
     const input = document.getElementById("aiInput");
