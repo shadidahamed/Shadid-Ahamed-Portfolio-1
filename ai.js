@@ -1,6 +1,6 @@
 /* =========================
-   AI ASSISTANT SYSTEM
-   ai.js - Professional Version
+   PORTFOLIO AI ASSISTANT
+   Professional & Mobile-Optimized
 ========================= */
 
 class PortfolioAI {
@@ -8,13 +8,14 @@ class PortfolioAI {
     this.aiBox = document.getElementById("aiBox");
     this.aiMessages = document.getElementById("aiMessages");
     this.aiInput = document.getElementById("aiInput");
+    this.aiBtn = document.querySelector(".ai-btn");
 
     this.init();
   }
 
   init() {
     if (!this.aiBox || !this.aiMessages || !this.aiInput) {
-      console.error("AI Assistant elements not found in DOM");
+      console.warn("AI elements not found");
       return;
     }
 
@@ -23,20 +24,26 @@ class PortfolioAI {
   }
 
   bindEvents() {
-    // Toggle AI Box
-    document.getElementById("aiToggle")?.addEventListener("click", () => this.toggleAI());
+    // Toggle button
+    this.aiBtn?.addEventListener("click", () => this.toggleAI());
 
-    // Handle Enter key
-    this.aiInput.addEventListener("keydown", (e) => {
-      if (e.key === "Enter") {
-        this.handleUserInput();
-      }
+    // Enter key
+    this.aiInput.addEventListener("keypress", (e) => {
+      if (e.key === "Enter") this.handleUserInput();
     });
 
-    // Optional: Click outside to close (better UX)
-    this.aiBox.addEventListener("click", (e) => {
-      if (e.target === this.aiBox) {
-        this.toggleAI();
+    // Close button in header
+    const closeBtn = this.aiBox.querySelector(".close-btn");
+    if (closeBtn) {
+      closeBtn.addEventListener("click", () => this.toggleAI());
+    }
+
+    // Click outside to close
+    document.addEventListener("click", (e) => {
+      if (!this.aiBox.contains(e.target) && !this.aiBtn.contains(e.target)) {
+        if (this.aiBox.style.display === "flex") {
+          this.toggleAI();
+        }
       }
     });
   }
@@ -46,64 +53,51 @@ class PortfolioAI {
       this.aiBox.style.display = "none";
     } else {
       this.aiBox.style.display = "flex";
-      this.aiInput.focus(); // Auto-focus input when opened
+      setTimeout(() => this.aiInput.focus(), 100);
     }
   }
 
-  openAI() {
-    this.aiBox.style.display = "flex";
-    this.aiInput.focus();
-  }
-
   addWelcomeMessage() {
-    const welcomeHTML = `
+    this.aiMessages.innerHTML = `
       <div class="ai-message bot">
-        👋 Hi! I'm your personal portfolio assistant.<br>
-        You can ask me about:
-        <strong>skills</strong>, <strong>projects</strong>, <strong>contact</strong>, or <strong>hiring</strong>.
+        👋 Hello! I'm your Portfolio AI Assistant.<br><br>
+        You can ask me anything like:<br>
+        • Hi / Hello<br>
+        • Who are you?<br>
+        • What are your skills?<br>
+        • Show me your projects<br>
+        • How can I hire you?<br>
+        • Contact info
       </div>
     `;
-
-    this.aiMessages.innerHTML = welcomeHTML;
   }
 
   handleUserInput() {
     const text = this.aiInput.value.trim();
     if (!text) return;
 
-    // Add user message
     this.addMessage("user", text);
-
-    // Clear input
     this.aiInput.value = "";
 
-    // Simulate thinking delay (feels more natural)
+    // Thinking delay for natural feel
     setTimeout(() => {
-      const reply = this.generateReply(text.toLowerCase());
+      const reply = this.generateSmartReply(text.toLowerCase());
       this.addMessage("bot", reply);
-    }, 400);
+    }, 350);
 
-    // Scroll to bottom
     this.scrollToBottom();
   }
 
   addMessage(type, content) {
-    const messageDiv = document.createElement("div");
-    messageDiv.className = `ai-message ${type}`;
+    const msgDiv = document.createElement("div");
+    msgDiv.className = `ai-message ${type}`;
 
-    if (type === "user") {
-      messageDiv.innerHTML = `
-        <span class="message-label">You</span>
-        <span class="message-text">${this.escapeHTML(content)}</span>
-      `;
-    } else {
-      messageDiv.innerHTML = `
-        <span class="message-label">AI</span>
-        <span class="message-text">${this.escapeHTML(content)}</span>
-      `;
-    }
+    msgDiv.innerHTML = `
+      <strong>${type === "user" ? "You" : "AI"}:</strong><br>
+      ${this.escapeHtml(content)}
+    `;
 
-    this.aiMessages.appendChild(messageDiv);
+    this.aiMessages.appendChild(msgDiv);
     this.scrollToBottom();
   }
 
@@ -111,65 +105,46 @@ class PortfolioAI {
     this.aiMessages.scrollTop = this.aiMessages.scrollHeight;
   }
 
-  escapeHTML(text) {
+  escapeHtml(text) {
     const div = document.createElement("div");
     div.textContent = text;
-    return div.innerHTML;
+    return div.innerHTML.replace(/\n/g, "<br>");
   }
 
-  /* ==================== SMART AI RESPONSES ==================== */
-  generateReply(msg) {
-    // Exact matches first
-    if (msg.includes("who are you") || msg.includes("introduce yourself")) {
-      return "I'm your intelligent portfolio assistant. I can help you learn more about my skills, projects, experience, and how to get in touch.";
-    }
-
+  generateSmartReply(msg) {
     if (msg.includes("hi") || msg.includes("hello") || msg.includes("hey")) {
-      return "Hey there! 👋 How can I help you today? Feel free to ask about my skills, projects, or hiring.";
+      return "Hey! 👋 Great to see you. How can I help you today?";
     }
 
-    if (msg.includes("how are you")) {
-      return "I'm doing great, thanks for asking! Ready to assist you with anything portfolio-related.";
+    if (msg.includes("who are you") || msg.includes("introduce")) {
+      return "I'm your personal Portfolio AI Assistant. I can tell you about skills, projects, experience, and help you get in touch.";
     }
 
-    // Hiring / Job related
-    if (msg.includes("hire") || msg.includes("job") || msg.includes("work") || msg.includes("freelance") || msg.includes("collaborate")) {
-      return "I'd love to work with you! You can reach out directly via Email or WhatsApp from the Contact section. Looking forward to hearing from you!";
+    if (msg.includes("skill") || msg.includes("technology") || msg.includes("stack")) {
+      return "I specialize in:\n• Modern HTML5 & CSS3 (Tailwind, etc.)\n• JavaScript (ES6+)\n• Responsive Web Design\n• Clean, performant code & UI/UX";
     }
 
-    // Skills
-    if (msg.includes("skill") || msg.includes("technology") || msg.includes("stack") || msg.includes("what do you know")) {
-      return "I specialize in:\n• HTML5, CSS3, Tailwind/Bootstrap\n• JavaScript (ES6+), React\n• Responsive & Modern UI/UX Design\n• Performance optimization & clean code";
+    if (msg.includes("project") || msg.includes("work") || msg.includes("portfolio")) {
+      return "Check out the Projects section! All projects have live demos and detailed descriptions. Which one interests you most?";
     }
 
-    // Projects
-    if (msg.includes("project") || msg.includes("work") || msg.includes("demo") || msg.includes("portfolio")) {
-      return "Check out the **Projects** section above! Each project has live demos, screenshots, and tech details. Let me know if you want more info about any specific one.";
+    if (msg.includes("hire") || msg.includes("job") || msg.includes("work with") || msg.includes("freelance")) {
+      return "I'd love to collaborate! Please reach out via Email or WhatsApp in the Contact section. Looking forward to working together!";
     }
 
-    // Contact
-    if (msg.includes("contact") || msg.includes("email") || msg.includes("whatsapp") || msg.includes("phone")) {
-      return "You can find all my contact details (Email, WhatsApp, LinkedIn, etc.) in the **Contact** section at the bottom of the page.";
+    if (msg.includes("contact") || msg.includes("email") || msg.includes("whatsapp")) {
+      return "All my contact details are available in the Contact section at the bottom of the page.";
     }
 
-    if (msg.includes("thank") || msg.includes("thanks")) {
-      return "You're very welcome! Glad I could help 😊";
+    if (msg.includes("thank")) {
+      return "You're welcome! 😊 Happy to help.";
     }
 
-    if (msg.includes("bye") || msg.includes("goodbye")) {
-      return "Goodbye! Feel free to come back anytime. Have a great day!";
-    }
-
-    // Fallback with smart suggestion
-    return "I'm not sure about that one, but I can definitely help with my **skills**, **projects**, **contact info**, or **hiring opportunities**. What would you like to know?";
+    return "I'm here to help! Try asking about my **skills**, **projects**, **hiring**, or **contact info**. What would you like to know?";
   }
 }
 
-// Initialize AI when DOM is loaded
+// Initialize when page loads
 document.addEventListener("DOMContentLoaded", () => {
-  window.portfolioAI = new PortfolioAI();
+  new PortfolioAI();
 });
-
-// Make functions globally available if you still call them from HTML
-window.toggleAI = () => window.portfolioAI?.toggleAI();
-window.openAI = () => window.portfolioAI?.openAI();
