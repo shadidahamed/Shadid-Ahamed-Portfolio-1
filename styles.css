@@ -96,20 +96,20 @@ background:rgba(0,0,0,0.85);
 
 /* FLOAT MENU */
 .mobile-menu-btn{
-position:fixed;
-right:20px;
-bottom:20px;
-width:55px;
-height:55px;
-border-radius:50%;
-background:rgba(255,255,255,0.1);
-backdrop-filter:blur(10px);
-display:none;
-justify-content:center;
-align-items:center;
-z-index:99;
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  background:linear-gradient(135deg,#22c55e,#16a34a);
+  color:#000;
+  display:none;
+  justify-content:center;
+  align-items:center;
+  z-index:999;
+  box-shadow:0 10px 25px rgba(0,0,0,0.4);
 }
-
 .mobile-menu{
 position:fixed;
 right:20px;
@@ -125,7 +125,9 @@ transition:0.3s;
 .mobile-menu.active{opacity:1;pointer-events:auto;}
 
 .mobile-menu a{
-width:45px;height:45px;
+width:55px;
+height:55px;
+font-size:18px;
 border-radius:50%;
 display:flex;
 align-items:center;
