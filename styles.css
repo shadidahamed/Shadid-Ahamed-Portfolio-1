@@ -285,3 +285,26 @@ nav{display:none;}
   0%,100%{opacity:1;}
   50%{opacity:0;}
 }
+
+.ai-suggestions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  padding:10px;
+}
+
+.ai-suggestions button{
+  background:#1f2937;
+  color:#fff;
+  border:none;
+  padding:6px 10px;
+  border-radius:8px;
+  font-size:12px;
+  cursor:pointer;
+  transition:0.2s;
+}
+
+.ai-suggestions button:hover{
+  background:#22c55e;
+  color:#000;
+}
