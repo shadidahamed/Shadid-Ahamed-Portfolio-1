@@ -24,15 +24,12 @@ function handleAI(e){
       reply = "Go to the contact section for all links like WhatsApp, GitHub and LinkedIn.";
     }
 
-    // Show user message
     chat.innerHTML += `<p><strong>You:</strong> ${input.value}</p>`;
 
-    // Create AI message container
     const aiMsg = document.createElement("p");
     aiMsg.innerHTML = "<strong>AI:</strong> ";
     chat.appendChild(aiMsg);
 
-    // Typing effect
     typeEffect(reply, aiMsg);
 
     input.value="";
@@ -47,7 +44,9 @@ function typeEffect(text, element){
     if(i < text.length){
       element.innerHTML += text.charAt(i);
       i++;
-      setTimeout(typing, 20); // speed control (lower = faster)
+      setTimeout(typing, 20);
     }
   }
 
+  typing(); // ✅ THIS WAS MISSING
+}
