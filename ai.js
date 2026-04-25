@@ -24,10 +24,32 @@ function handleAI(e){
       reply = "Go to the contact section for all links like WhatsApp, GitHub and LinkedIn.";
     }
 
+    // Show user message
     chat.innerHTML += `<p><strong>You:</strong> ${input.value}</p>`;
-    chat.innerHTML += `<p><strong>AI:</strong> ${reply}</p>`;
+
+    // Create AI message container
+    const aiMsg = document.createElement("p");
+    aiMsg.innerHTML = "<strong>AI:</strong> ";
+    chat.appendChild(aiMsg);
+
+    // Typing effect
+    typeEffect(reply, aiMsg);
 
     input.value="";
     chat.scrollTop = chat.scrollHeight;
   }
+}
+
+function typeEffect(text, element){
+  let i = 0;
+
+  function typing(){
+    if(i < text.length){
+      element.innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typing, 20); // speed control (lower = faster)
+    }
+  }
+
+  typing();
 }
