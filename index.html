@@ -13,23 +13,28 @@
 
 <body>
 
-<!-- AI BUTTON -->
-<div class="ai-btn" onclick="toggleAI()">🤖</div>
+<!-- AI Button -->
+<div class="ai-btn">🤖</div>
 
-<!-- AI BOX -->
-<div class="ai-box" id="aiBox">
-  <div class="ai-header">AI Assistant</div>
-  <div class="ai-body" id="aiMessages"></div>
-  <input id="aiInput" onkeydown="handleAI(event)" placeholder="Ask...">
-</div>
+<!-- AI Box -->
+<div id="aiBox">
+  <div class="ai-header">
+    <span>Portfolio AI Assistant</span>
+    <button class="close-btn">✕</button>
+  </div>
   
-<div class="ai-hints">
-  <p>Try asking:</p>
-  <button onclick="quickAsk('skills')">My skills</button>
-  <button onclick="quickAsk('project')">Projects</button>
-  <button onclick="quickAsk('contact')">Contact info</button>
-  <button onclick="quickAsk('hire')">Hiring</button>
+  <div id="aiMessages"></div>
+  
+  <div id="aiInputContainer">
+    <input type="text" id="aiInput" placeholder="Ask me anything...">
+  </div>
+  
+  <div class="ai-hints">
+    <!-- Optional quick buttons -->
+  </div>
 </div>
+
+
 <!-- HEADER -->
 <header>
   <div class="container header-container">
