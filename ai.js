@@ -54,3 +54,14 @@ function typeEffect(text, element){
 
   typing(); // ✅ THIS WAS MISSING
 }
+
+function quickAsk(type){
+  const input = document.getElementById("aiInput");
+
+  if(type === "hire") input.value = "hire";
+  if(type === "skills") input.value = "skills";
+  if(type === "project") input.value = "project";
+  if(type === "contact") input.value = "contact";
+
+  input.focus();
+}
