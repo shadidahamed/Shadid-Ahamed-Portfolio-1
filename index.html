@@ -3,83 +3,47 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="google-site-verification" content="RN9rcTU99sQYDb5nYnBjVy8LLl2IJ62fiM2htfhSd8A" />
 
- <!-- SEO Basics -->
-<meta name="description" content="Shadid Ahamed is a frontend developer from Bangladesh specializing in modern, responsive websites, UI/UX design, and freelance web development.">
-
-<meta name="keywords" content="Shadid Ahamed, frontend developer Bangladesh, web developer Dhaka, freelance web developer, UI designer, portfolio">
-
-<meta name="author" content="Shadid Ahamed">
-
-<!-- Open Graph (for Facebook, LinkedIn) -->
-<meta property="og:title" content="Shadid Ahamed | Developer Portfolio">
-<meta property="og:description" content="Frontend developer building fast, modern websites for businesses and students.">
-<meta property="og:image" content="https://shadidahamed.github.io/Shadid-Ahamed-Portfolio-1/image/Heroimage.png">
-<meta property="og:url" content="https://shadidahamed.github.io/Shadid-Ahamed-Portfolio-1/">
-<meta property="og:type" content="website">
-
-<!-- Twitter SEO -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Shadid Ahamed Portfolio">
-<meta name="twitter:description" content="Frontend Developer • UI Specialist • Freelancer">
-<meta name="twitter:image" content="https://shadidahamed.github.io/Shadid-Ahamed-Portfolio-1/image/Heroimage.png">
- 
 <title>Shadid Ahamed | Developer Portfolio</title>
 
-<link rel="icon"
- type="image/png"
-href="image/portfolio link favicon.png">
-<link rel="stylesheet" href="styles.css">
+<meta name="description" content="Frontend Developer from Bangladesh building modern websites, UI design and freelance web solutions.">
+<meta name="keywords" content="Shadid Ahamed, web developer Bangladesh, frontend developer, portfolio">
+<meta name="author" content="Shadid Ahamed">
+
+<link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#0b0f19">
-  
-<style>
-html{scroll-behavior:smooth;}
-</style>
-<link rel="icon" type="image/png" href="/image/portfolio link favicon.png/favicon-96x96.png?v=20260423" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="/image/portfolio link favicon.png/favicon.svg?v=20260423" />
-<link rel="shortcut icon" href="/image/portfolio link favicon.png/favicon.ico?v=20260423" />
-<link rel="apple-touch-icon" sizes="180x180" href="/image/portfolio link favicon.png/apple-touch-icon.png?v=20260423" />
-<meta name="apple-mobile-web-app-title" content="Shadid Ahamed portfolio " />
-<link rel="manifest" href="/image/portfolio link favicon.png/site.webmanifest?v=20260423" />
- 
+
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header>
   <div class="container header-container">
-    <h1 class="logo">Shadid<span>.</span></h1>
+    <h1 class="logo">Shadid.</h1>
 
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Work</a></li>
-        <li><a href="#videos">Videos</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#cv" class="btn">CV</a></li>
-      </ul>
+    <nav id="navMenu">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Work</a>
+      <a href="#videos">Videos</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+      <a href="#cv" class="btn">CV</a>
     </nav>
+
+    <div class="menu-btn" onclick="toggleMenu()">
+      <i class="fa fa-bars"></i>
+    </div>
   </div>
 </header>
 
 <!-- HERO -->
 <section class="hero container">
   <div class="hero-text">
-    <h1>Shadid Ahamed – Frontend Developer & Freelance Web Designer in Bangladesh also help students to understand complex things easily. </h1>
-
-    <p class="subtext">Frontend Developer • UI Specialist • Freelancer</p>
-
-    <p class="description">
-      I create clean, responsive and conversion-focused websites for businesses and personal brands.
-    </p>
-
+    <h2>Frontend Developer & Freelancer in Bangladesh</h2>
+    <p>Building modern, fast and responsive websites.</p>
     <a href="#contact" class="btn">Hire Me</a>
-    <a href="#projects" class="btn secondary">View Work</a>
   </div>
 
   <div class="hero-image">
@@ -91,18 +55,7 @@ html{scroll-behavior:smooth;}
 <section id="about" class="section container">
   <h2>About</h2>
   <div class="card">
-    <p><strong>Shadid Ahamed</strong> — DEVELOPER and a MENTOR from Dhaka, Bangladesh.</p>
-    <p>I focus on clarity, speed,feel, and user experience.</p>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section class="section container">
-  <h2>Services</h2>
-  <div class="grid-3">
-    <div class="card"><h3>Web Development</h3></div>
-    <div class="card"><h3>UI/UX Design</h3></div>
-    <div class="card"><h3>Optimization</h3></div>
+    Developer & Mentor from Dhaka, Bangladesh.
   </div>
 </section>
 
@@ -110,226 +63,76 @@ html{scroll-behavior:smooth;}
 <section id="skills" class="section container">
   <h2>Skills</h2>
 
-  <ul class="skills">
-    <li>HTML5</li>
-    <li>CSS3</li>
-    <li>JavaScript</li>
-    <li>Responsive Design</li>
-    <li>Easy Notes</li>
-    <li>Fun Classes Own Made</li>
-  </ul>
-
-  <div class="skill-carousel">
-    <div class="skill-track">
-      <img src="image/IMG scetch 1.jpg" onclick="openImage(this)">
-      <img src="image/image sketch 1.jpg" onclick="openImage(this)">
-      <img src="image/image sketch 2.jpg" onclick="openImage(this)">
-      <img src="image/image ipad 1.png" onclick="openImage(this)">
-      <img src="image/image colour 1.jpg" onclick="openImage(this)">
-      <img src="image/image pc 1.png" onclick="openImage(this)">
-      <img src="image/image sketch 3.jpg" onclick="openImage(this)">
-    </div>
+  <div class="skill-track">
+    <img src="image/image1.jpg" onclick="openImage(this)">
+    <img src="image/image2.jpg" onclick="openImage(this)">
+    <img src="image/image3.jpg" onclick="openImage(this)">
   </div>
-
- <div id="lightbox" onclick="closeImage()">
-  <img id="lightbox-img" onclick="event.stopPropagation()">
-</div>
 </section>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" onclick="closeImage()">
+  <img id="lightbox-img">
+</div>
 
 <!-- PROJECTS -->
 <section id="projects" class="section container">
-  <h2>Selected Work</h2>
+  <h2>Work</h2>
 
-  <div class="grid-2">
-    <div class="project-card">
-      <h3>Task Tracker</h3>
-      <p>Simple productivity web app UI.</p>
-    </div>
-
-    <div class="project-card">
-      <h3>E-commerce Website</h3>
-      <p>Responsive storefront for business.</p>
-      <a href="https://shadidahamed.github.io/trendcart/" class="btn">Live Demo</a>
-    </div>
-  </div>
+  <div class="card">Task Tracker</div>
+  <div class="card">E-commerce Website</div>
 </section>
 
-<!-- VIDEOS (KEPT FULL) -->
-<section id="videos" class="section container">
-  <h2>My Videos</h2>
-
-  <div class="video-box-grid">
-    <div class="video-box"><h3>Video 1</h3><a href="https://youtube.com/watch?v=MCj4pNiJR_Q&si=r3qkUyRYvC5F_b4C">Watch</a></div>
-    <div class="video-box"><h3>Video 2</h3><a href="#">Watch</a></div>
-    <div class="video-box"><h3>Video 3</h3><a href="#">Watch</a></div>
-  </div>
-</section>
-
-<!-- EXPERIENCE + EDUCATION -->
-<section id="experience" class="section container">
-  <h2>Experience & Education</h2>
-<div class="card">
-      <h3>Student</h3>
-      <p>
-        <ul>
-          <li>Former student of Motijheel Ideal School and College,Dhaka-1000(Passed by achieving GPA-5 in SSC[2023 Batch])</li>
-          <li>Former student of Notre Dame College,Dhaka-1000(Passed by achieving GPA-5 in HSC[2025 Batch])</li>
-          <li>Current Student of BRAC UNIVERSITY Architecture department</li>
-        </ul>
-      </p>
-    </div>
-
-  <div class="grid-3">
-    <div class="card">
-      <h3>Academic Mentoring</h3>
-      <p>Physics & English tutoring for students.</p>
-    </div>
-
-
-    <div class="card">
-      <h3>Technical Communication</h3>
-      <p>Explaining complex topics simply.</p>
-    </div>
-    
-    
-    <div class="card">
-      <h3>Frontend Development</h3>
-      <p>Self-taught HTML, CSS, JS projects.</p>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT (FULL RESTORED) -->
+<!-- CONTACT -->
 <section id="contact" class="section container">
-  <h2>Contact & Links</h2>
+  <h2>Contact</h2>
 
-  <div class="contact-icon-grid">
-
-    <a href="mailto:shadidahamed.matashome05m@gmail.com" class="contact-card primary">
-      <i class="fa-solid fa-envelope"></i>
-      <span>Email</span>
-    </a>
-
-    <a href="https://wa.me/8801326162684" class="contact-card highlight">
-      <i class="fa-brands fa-whatsapp"></i>
-      <span>WhatsApp</span>
-    </a>
-
-    <a href="https://github.com/shadidahamed" class="contact-card">
-      <i class="fa-brands fa-github"></i>
-      <span>GitHub</span>
-    </a>
-
-    <a href="https://www.linkedin.com/in/shadid-ahamed-41a0703b2/" class="contact-card">
-      <i class="fa-brands fa-linkedin"></i>
-      <span>LinkedIn</span>
-    </a>
-
-    <a href="https://www.instagram.com/shade_ed25" class="contact-card">
-      <i class="fa-brands fa-instagram"></i>
-      <span>Instagram</span>
-    </a>
-
-    <a href="https://x.com/ShadidAhamed" class="contact-card">
-      <i class="fa-brands fa-x-twitter"></i>
-      <span>X</span>
-    </a>
-
-    <a href="https://www.reddit.com/user/Shade_ed25" class="contact-card">
-      <i class="fa-brands fa-reddit"></i>
-      <span>Reddit</span>
-    </a>
-
-    <a href="https://pin.it/4Z5y34R2T" class="contact-card">
-      <i class="fa-brands fa-pinterest"></i>
-      <span>Pinterest</span>
-    </a>
-
+  <div class="contact-grid">
+    <a href="mailto:you@gmail.com" class="contact-card">Email</a>
+    <a href="https://wa.me/8801326..." class="contact-card">WhatsApp</a>
   </div>
 </section>
 
 <!-- CV -->
-<section id="cv" class="section container center">
-  <h2>Resume</h2>
-  <p>Download my CV for full details</p>
-  <a href="https://drive.google.com/file/d/1xvluu5Muh8olsWQYBxyADMMFhm1w3SdM/view?usp=drivesdk" class="btn">Download CV</a>
+<section id="cv" class="section container">
+  <h2>CV</h2>
+  <a class="btn" href="#">Download CV</a>
 </section>
 
-<footer>
-  <p>© 2026 Shadid.</p>
-</footer>
+<!-- FLOAT AI BUTTON -->
+<div class="ai-btn" onclick="toggleAI()">🤖</div>
 
-<!-- FLOAT MENU -->
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#about"><i class="fa-solid fa-user"></i></a>
-  <a href="#skills"><i class="fa-solid fa-code"></i></a>
-  <a href="#projects"><i class="fa-solid fa-briefcase"></i></a>
-  <a href="#videos"><i class="fa-solid fa-video"></i></a>
-  <a href="#experience"><i class="fa-solid fa-chart-line"></i></a>
-  <a href="#contact"><i class="fa-solid fa-envelope"></i></a>
+<div class="ai-box" id="aiBox">
+  <div class="ai-header">AI Assistant</div>
 
-  <!-- ✅ NEW CV BUTTON -->
-  <a href="#cv" class="cv-btn">
-    <i class="fa-solid fa-file"></i>
-  </a>
+  <div class="ai-body" id="aiMessages"></div>
+
+  <input id="aiInput" onkeydown="handleAI(event)" placeholder="Ask...">
 </div>
+
+<script src="ai.js"></script>
 
 <script>
 function toggleMenu(){
-document.getElementById("mobileMenu").classList.toggle("active");
+  document.getElementById("navMenu").classList.toggle("active");
 }
 
 function openImage(img){
-document.getElementById("lightbox").style.display="flex";
-document.getElementById("lightbox-img").src=img.src;
+  document.body.style.overflow = "hidden";
+  document.getElementById("lightbox").style.display = "flex";
+  document.getElementById("lightbox-img").src = img.src;
 }
 
 function closeImage(){
-document.getElementById("lightbox").style.display="none";
+  document.body.style.overflow = "auto";
+  document.getElementById("lightbox").style.display = "none";
 }
 
-/* SCROLL REVEAL */
-const elements=document.querySelectorAll(".card,.project-card,.video-box");
-
-const observer=new IntersectionObserver(entries=>{
-entries.forEach(e=>{
-if(e.isIntersecting){
-e.target.classList.add("show");
-}
-});
-});
-
-elements.forEach(el=>{
-el.classList.add("hidden");
-observer.observe(el);
-});
-</script>
-
-<script>
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('sw.js');
+function toggleAI(){
+  const box = document.getElementById("aiBox");
+  box.style.display = (box.style.display === "flex") ? "none" : "flex";
 }
 </script>
 
-
-<div class="ai-btn" onclick="toggleAI()">
-  🤖
-</div>
-
-<div class="ai-box" id="aiBox">
-  <div class="ai-header">Ask Me</div>
-  <div class="ai-body" id="aiMessages"></div>
- <div class="ai-suggestions">
-  <button onclick="quickAsk('hire')">💼 Hire you</button>
-  <button onclick="quickAsk('skills')">🧠 Skills</button>
-  <button onclick="quickAsk('project')">📁 Projects</button>
-  <button onclick="quickAsk('contact')">📞 Contact</button>
-</div>
-  <input type="text" id="aiInput" placeholder="Ask something..." onkeydown="handleAI(event)">
-</div>
- <script src="ai.js"></script>
- <div class="menu-btn" onclick="toggleMenu()">
-  <i class="fa-solid fa-bars"></i>
-</div>
 </body>
 </html>
