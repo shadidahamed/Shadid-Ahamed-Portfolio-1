@@ -1,117 +1,83 @@
-function toggleAI() {
+/* =========================
+   AI ASSISTANT SYSTEM
+   ai.js
+========================= */
+
+function toggleAI(){
   const box = document.getElementById("aiBox");
-  if (!box) return;
-
-  const isOpen = box.style.display === "flex";
-  box.style.display = isOpen ? "none" : "flex";
+  box.style.display = (box.style.display === "flex") ? "none" : "flex";
 }
 
-/* =========================
-   MAIN AI HANDLER
-========================= */
-function handleAI(e) {
-  if (e.key !== "Enter") return;
-
-  const input = document.getElementById("aiInput");
-  const chat = document.getElementById("aiMessages");
-
-  if (!input || !chat) return;
-
-  const msg = input.value.trim();
-  if (msg === "") return;
-
-  const lower = msg.toLowerCase();
-
-  // USER MESSAGE
-  appendMessage("You", msg);
-
-  // BOT RESPONSE
-  const reply = generateReply(lower);
-
-  appendTypingReply(reply, chat);
-
-  input.value = "";
-  chat.scrollTop = chat.scrollHeight;
+/* OPEN AI BOX IF NOT OPEN */
+function openAI(){
+  document.getElementById("aiBox").style.display = "flex";
 }
 
-/* =========================
-   RESPONSE ENGINE
-========================= */
-function generateReply(msg) {
-  if (msg.includes("hire") || msg.includes("job")) {
-    return "You can contact me via Email or WhatsApp in the Contact section for hiring.";
+/* HANDLE USER INPUT */
+function handleAI(event){
+  if(event.key === "Enter"){
+    const input = document.getElementById("aiInput");
+    const msgBox = document.getElementById("aiMessages");
+
+    let text = input.value.trim();
+    if(text === "") return;
+
+    // USER MESSAGE
+    let userMsg = document.createElement("div");
+    userMsg.style.margin = "5px 0";
+    userMsg.style.color = "#38bdf8";
+    userMsg.innerText = "You: " + text;
+    msgBox.appendChild(userMsg);
+
+    // AI RESPONSE
+    let botMsg = document.createElement("div");
+    botMsg.style.margin = "5px 0";
+    botMsg.style.color = "#ffffff";
+
+    botMsg.innerText = "AI: " + getAIResponse(text);
+
+    msgBox.appendChild(botMsg);
+
+    input.value = "";
+    msgBox.scrollTop = msgBox.scrollHeight;
+  }
+}
+
+/* SIMPLE AI LOGIC (RULE-BASED) */
+function getAIResponse(input){
+
+  let msg = input.toLowerCase();
+
+  // greetings
+  if(msg.includes("hi") || msg.includes("hello")){
+    return "Hello 👋 I'm your portfolio AI assistant!";
   }
 
-  if (msg.includes("skill")) {
-    return "I work with HTML, CSS, JavaScript, UI Design, and Problem Solving.";
+  // portfolio help
+  if(msg.includes("project")){
+    return "You have Task Tracker and E-commerce TrendCart project.";
   }
 
-  if (msg.includes("project")) {
-    return "Check the Projects section for live demos and case studies.";
+  // skills
+  if(msg.includes("skill")){
+    return "You know HTML, CSS, JavaScript and Frontend Development.";
   }
 
-  if (msg.includes("contact")) {
-    return "Scroll to Contact section — all professional links are available there.";
+  // cv
+  if(msg.includes("cv") || msg.includes("resume")){
+    return "You can download your CV from the CV section below.";
   }
 
-  return "I can help you with skills, projects, contact, or hiring information.";
-}
-
-/* =========================
-   CHAT UI HELPERS
-========================= */
-function appendMessage(sender, text) {
-  const chat = document.getElementById("aiMessages");
-  if (!chat) return;
-
-  const msg = document.createElement("p");
-  msg.innerHTML = `<b>${sender}:</b> ${escapeHTML(text)}`;
-  chat.appendChild(msg);
-}
-
-/* typing effect (clean version) */
-function appendTypingReply(text, chat) {
-  const el = document.createElement("p");
-  el.innerHTML = "<b>AI:</b> ";
-  chat.appendChild(el);
-
-  let i = 0;
-
-  function type() {
-    if (i < text.length) {
-      el.innerHTML += text[i];
-      i++;
-      setTimeout(type, 15);
-    }
+  // contact
+  if(msg.includes("contact") || msg.includes("email")){
+    return "You can contact via Email, GitHub, LinkedIn or WhatsApp.";
   }
 
-  type();
-}
+  // motivation
+  if(msg.includes("motivate") || msg.includes("help")){
+    return "Keep going 💪 You are building a strong developer portfolio!";
+  }
 
-/* =========================
-   QUICK BUTTON SUPPORT
-========================= */
-function quickAsk(type) {
-  const input = document.getElementById("aiInput");
-  if (!input) return;
-
-  const map = {
-    hire: "hire",
-    skills: "skills",
-    project: "project",
-    contact: "contact"
-  };
-
-  input.value = map[type] || "";
-  input.focus();
-}
-
-/* =========================
-   SECURITY CLEANUP (IMPORTANT)
-========================= */
-function escapeHTML(str) {
-  return str
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;");
+  // default
+  return "I am still learning 🤖 Ask about projects, skills or contact.";
 }
