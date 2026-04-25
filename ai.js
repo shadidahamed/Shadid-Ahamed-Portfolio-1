@@ -1,66 +1,99 @@
-function toggleAI(){
+function toggleAI() {
   const box = document.getElementById("aiBox");
+  if (!box) return;
 
-  if(!box.style.display || box.style.display === "none"){
-    box.style.display = "flex";
-  } else {
-    box.style.display = "none";
-  }
+  const isOpen = box.style.display === "flex";
+  box.style.display = isOpen ? "none" : "flex";
 }
 
-function handleAI(e){
-  if(e.key !== "Enter") return;
+/* =========================
+   MAIN AI HANDLER
+========================= */
+function handleAI(e) {
+  if (e.key !== "Enter") return;
 
   const input = document.getElementById("aiInput");
-  const msg = input.value.trim().toLowerCase();
   const chat = document.getElementById("aiMessages");
 
-  if(msg === "") return;
+  if (!input || !chat) return;
 
-  let reply = "I can help with skills, projects, contact or hiring.";
+  const msg = input.value.trim();
+  if (msg === "") return;
 
-  if(msg.includes("hire")){
-    reply = "Contact section contains WhatsApp & Email for hiring.";
-  }
-  else if(msg.includes("skills")){
-    reply = "HTML, CSS, JavaScript, UI Design & Problem Solving.";
-  }
-  else if(msg.includes("project")){
-    reply = "Check Work section for live projects.";
-  }
-  else if(msg.includes("contact")){
-    reply = "Scroll to Contact section for all links.";
-  }
+  const lower = msg.toLowerCase();
 
-  chat.innerHTML += `<p><b>You:</b> ${input.value}</p>`;
+  // USER MESSAGE
+  appendMessage("You", msg);
 
-  const aiMsg = document.createElement("p");
-  aiMsg.innerHTML = "<b>AI:</b> ";
-  chat.appendChild(aiMsg);
+  // BOT RESPONSE
+  const reply = generateReply(lower);
 
-  typeEffect(reply, aiMsg);
+  appendTypingReply(reply, chat);
 
   input.value = "";
   chat.scrollTop = chat.scrollHeight;
 }
 
-function typeEffect(text, el){
-  let i = 0;
-  el.innerHTML = "<b>AI:</b> ";
+/* =========================
+   RESPONSE ENGINE
+========================= */
+function generateReply(msg) {
+  if (msg.includes("hire") || msg.includes("job")) {
+    return "You can contact me via Email or WhatsApp in the Contact section for hiring.";
+  }
 
-  function run(){
-    if(i < text.length){
+  if (msg.includes("skill")) {
+    return "I work with HTML, CSS, JavaScript, UI Design, and Problem Solving.";
+  }
+
+  if (msg.includes("project")) {
+    return "Check the Projects section for live demos and case studies.";
+  }
+
+  if (msg.includes("contact")) {
+    return "Scroll to Contact section — all professional links are available there.";
+  }
+
+  return "I can help you with skills, projects, contact, or hiring information.";
+}
+
+/* =========================
+   CHAT UI HELPERS
+========================= */
+function appendMessage(sender, text) {
+  const chat = document.getElementById("aiMessages");
+  if (!chat) return;
+
+  const msg = document.createElement("p");
+  msg.innerHTML = `<b>${sender}:</b> ${escapeHTML(text)}`;
+  chat.appendChild(msg);
+}
+
+/* typing effect (clean version) */
+function appendTypingReply(text, chat) {
+  const el = document.createElement("p");
+  el.innerHTML = "<b>AI:</b> ";
+  chat.appendChild(el);
+
+  let i = 0;
+
+  function type() {
+    if (i < text.length) {
       el.innerHTML += text[i];
       i++;
-      setTimeout(run, 18);
+      setTimeout(type, 15);
     }
   }
 
-  run();
+  type();
 }
 
-function quickAsk(type){
+/* =========================
+   QUICK BUTTON SUPPORT
+========================= */
+function quickAsk(type) {
   const input = document.getElementById("aiInput");
+  if (!input) return;
 
   const map = {
     hire: "hire",
@@ -69,6 +102,16 @@ function quickAsk(type){
     contact: "contact"
   };
 
-  input.value = map[type];
+  input.value = map[type] || "";
   input.focus();
+}
+
+/* =========================
+   SECURITY CLEANUP (IMPORTANT)
+========================= */
+function escapeHTML(str) {
+  return str
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
 }
