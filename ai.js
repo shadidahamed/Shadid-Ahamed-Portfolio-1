@@ -51,5 +51,3 @@ function typeEffect(text, element){
     }
   }
 
-  typing();
-}
