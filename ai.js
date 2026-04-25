@@ -1,42 +1,13 @@
-
-/* =========================
-   AI TOGGLE
-========================= */
 function toggleAI() {
   const box = document.getElementById("aiBox");
   if (!box) return;
 
-  box.style.display = (box.style.display === "flex") ? "none" : "flex";
+  const isOpen = box.style.display === "flex";
+  box.style.display = isOpen ? "none" : "flex";
 }
 
 /* =========================
-   VOICE CONTROL
-========================= */
-let voiceEnabled = true;
-
-function toggleVoice() {
-  voiceEnabled = !voiceEnabled;
-}
-
-/* =========================
-   SPEECH ENGINE
-========================= */
-function speak(text) {
-  if (!voiceEnabled) return;
-  if (!("speechSynthesis" in window)) return;
-
-  window.speechSynthesis.cancel(); // stop previous speech
-
-  const utterance = new SpeechSynthesisUtterance(text);
-  utterance.rate = 1;
-  utterance.pitch = 1;
-  utterance.volume = 1;
-
-  window.speechSynthesis.speak(utterance);
-}
-
-/* =========================
-   AI INPUT HANDLER
+   MAIN AI HANDLER
 ========================= */
 function handleAI(e) {
   if (e.key !== "Enter") return;
@@ -51,12 +22,13 @@ function handleAI(e) {
 
   const lower = msg.toLowerCase();
 
+  // USER MESSAGE
   appendMessage("You", msg);
 
+  // BOT RESPONSE
   const reply = generateReply(lower);
 
   appendTypingReply(reply, chat);
-  speak(reply);
 
   input.value = "";
   chat.scrollTop = chat.scrollHeight;
@@ -67,26 +39,26 @@ function handleAI(e) {
 ========================= */
 function generateReply(msg) {
   if (msg.includes("hire") || msg.includes("job")) {
-    return "You can contact me via Email or WhatsApp in the Contact section for hiring opportunities.";
+    return "You can contact me via Email or WhatsApp in the Contact section for hiring.";
   }
 
   if (msg.includes("skill")) {
-    return "I work with HTML, CSS, JavaScript, UI Design and Problem Solving.";
+    return "I work with HTML, CSS, JavaScript, UI Design, and Problem Solving.";
   }
 
   if (msg.includes("project")) {
-    return "Check the Projects section to see my live work and case studies.";
+    return "Check the Projects section for live demos and case studies.";
   }
 
   if (msg.includes("contact")) {
-    return "All contact links are available in the Contact section of this portfolio.";
+    return "Scroll to Contact section — all professional links are available there.";
   }
 
-  return "I can help you with skills, projects, contact or hiring information.";
+  return "I can help you with skills, projects, contact, or hiring information.";
 }
 
 /* =========================
-   CHAT UI
+   CHAT UI HELPERS
 ========================= */
 function appendMessage(sender, text) {
   const chat = document.getElementById("aiMessages");
@@ -97,7 +69,7 @@ function appendMessage(sender, text) {
   chat.appendChild(msg);
 }
 
-/* typing effect */
+/* typing effect (clean version) */
 function appendTypingReply(text, chat) {
   const el = document.createElement("p");
   el.innerHTML = "<b>AI:</b> ";
@@ -117,7 +89,7 @@ function appendTypingReply(text, chat) {
 }
 
 /* =========================
-   QUICK ACTIONS
+   QUICK BUTTON SUPPORT
 ========================= */
 function quickAsk(type) {
   const input = document.getElementById("aiInput");
@@ -135,25 +107,11 @@ function quickAsk(type) {
 }
 
 /* =========================
-   SECURITY
+   SECURITY CLEANUP (IMPORTANT)
 ========================= */
 function escapeHTML(str) {
   return str
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;");
-}
-
-/* =========================
-   LIGHTBOX (SKILLS IMAGES)
-========================= */
-function openImage(img) {
-  document.getElementById("lightbox").style.display = "flex";
-  document.getElementById("lightbox-img").src = img.src;
-  document.body.style.overflow = "hidden";
-}
-
-function closeImage() {
-  document.getElementById("lightbox").style.display = "none";
-  document.body.style.overflow = "auto";
 }
