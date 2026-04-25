@@ -21,7 +21,14 @@
   <div class="ai-body" id="aiMessages"></div>
   <input id="aiInput" onkeydown="handleAI(event)" placeholder="Ask...">
 </div>
-
+  
+<div class="ai-hints">
+  <p>Try asking:</p>
+  <button onclick="quickAsk('skills')">My skills</button>
+  <button onclick="quickAsk('project')">Projects</button>
+  <button onclick="quickAsk('contact')">Contact info</button>
+  <button onclick="quickAsk('hire')">Hiring</button>
+</div>
 <!-- HEADER -->
 <header>
   <div class="container header-container">
