@@ -1,3 +1,117 @@
+/* =========================
+   FRAMER-STYLE ANIMATION SYSTEM
+========================= */
+
+:root{
+  --bg:#0b0f19;
+  --card:rgba(255,255,255,0.06);
+  --border:rgba(255,255,255,0.1);
+  --green:#22c55e;
+}
+
+/* Smooth global animation */
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background: radial-gradient(circle at top, #111827, var(--bg));
+}
+
+/* ===== HERO ANIMATION ===== */
+.hero{
+  animation: fadeUp 1s ease forwards;
+  opacity:0;
+}
+
+.hero-text h2{
+  animation: slideLeft 1s ease forwards;
+}
+
+.hero-image img{
+  animation: float 4s ease-in-out infinite;
+}
+
+/* ===== CARD ANIMATION (FRAMER STYLE) ===== */
+.card, .project-card, .video-box{
+  opacity:0;
+  transform: translateY(40px) scale(0.98);
+  transition: all 0.8s cubic-bezier(.2,.8,.2,1);
+  backdrop-filter: blur(10px);
+  border:1px solid var(--border);
+  background: var(--card);
+}
+
+.card.show,
+.project-card.show,
+.video-box.show{
+  opacity:1;
+  transform: translateY(0) scale(1);
+}
+
+/* hover like Framer UI */
+.card:hover,
+.project-card:hover{
+  transform: translateY(-8px) scale(1.02);
+  border-color: var(--green);
+}
+
+/* ===== BUTTON ANIMATION ===== */
+.btn{
+  position:relative;
+  overflow:hidden;
+  transition:0.4s;
+}
+
+.btn::after{
+  content:"";
+  position:absolute;
+  width:100%;
+  height:100%;
+  left:-100%;
+  top:0;
+  background:linear-gradient(120deg,transparent,rgba(255,255,255,0.3),transparent);
+  transition:0.5s;
+}
+
+.btn:hover::after{
+  left:100%;
+}
+
+/* ===== FLOATING EFFECT ===== */
+@keyframes float{
+  0%{transform:translateY(0px);}
+  50%{transform:translateY(-10px);}
+  100%{transform:translateY(0px);}
+}
+
+/* ===== FADE UP ===== */
+@keyframes fadeUp{
+  from{opacity:0; transform:translateY(30px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+/* ===== SLIDE LEFT ===== */
+@keyframes slideLeft{
+  from{opacity:0; transform:translateX(-40px);}
+  to{opacity:1; transform:translateX(0);}
+}
+
+/* ===== GLASS NAV ===== */
+header{
+  background: rgba(10,15,25,0.6);
+  backdrop-filter: blur(20px);
+}
+
+/* ===== SKILLS SCROLL (FRAMER STYLE) ===== */
+.skill-track img{
+  transition:0.4s;
+}
+
+.skill-track img:hover{
+  transform:scale(1.2) rotate(3deg);
+}
+
 *{
   margin:0;
   padding:0;
