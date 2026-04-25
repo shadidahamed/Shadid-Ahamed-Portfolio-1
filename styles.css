@@ -134,6 +134,14 @@ background:#111827;
 color:#22c55e;
 }
 
+/* CV button special style */
+.cv-btn{
+  background: linear-gradient(135deg,#22c55e,#16a34a);
+  color:#000 !important;
+  font-weight:bold;
+  transform: scale(1.1);
+}
+
 /* ANIMATION */
 .hidden{opacity:0;transform:translateY(30px);}
 .show{opacity:1;transform:translateY(0);transition:0.6s;}
