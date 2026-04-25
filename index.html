@@ -131,9 +131,9 @@ html{scroll-behavior:smooth;}
     </div>
   </div>
 
-  <div id="lightbox" onclick="closeImage()">
-    <img id="lightbox-img">
-  </div>
+ <div id="lightbox" onclick="closeImage()">
+  <img id="lightbox-img" onclick="event.stopPropagation()">
+</div>
 </section>
 
 <!-- PROJECTS -->
