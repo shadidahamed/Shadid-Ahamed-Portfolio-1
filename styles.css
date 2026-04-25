@@ -1,130 +1,133 @@
-html,body{
-  width:100%;
-  overflow-x:hidden;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI";
-  background:#0b0f19;
-  color:#fff;
+/* =========================
+   MODERN MOTION SYSTEM
+========================= */
+
+html {
+  scroll-behavior: smooth;
 }
 
-/* smooth entry */
-.page-loader{
-  position:fixed;
-  inset:0;
-  background:#0b0f19;
-  animation:fade 0.8s forwards;
-  z-index:9999;
+body {
+  overflow-x: hidden;
 }
 
-@keyframes fade{
-  to{opacity:0;visibility:hidden;}
+/* Smooth page entrance */
+body {
+  animation: pageLoad 0.8s ease;
 }
 
-/* REVEAL ANIMATION */
-.hidden{
-  opacity:0;
-  transform:translateY(40px);
-}
-
-.show{
-  opacity:1;
-  transform:translateY(0);
-  transition:0.8s ease;
-}
-
-/* HEADER */
-header{
-  position:sticky;
-  top:0;
-  backdrop-filter:blur(15px);
-  background:rgba(10,15,25,0.6);
-}
-
-/* HERO */
-.hero{
-  display:flex;
-  align-items:center;
-  gap:40px;
-}
-
-@media(max-width:768px){
-  .hero{
-    flex-direction:column;
-    text-align:center;
+@keyframes pageLoad {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-/* CARDS */
-.card{
-  background:#111827;
-  padding:20px;
-  border-radius:16px;
-  transition:0.3s;
+/* =========================
+   GLASS NAV (MODERN)
+========================= */
+
+header {
+  backdrop-filter: blur(20px);
+  background: rgba(10, 15, 25, 0.7);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
-.card:hover{
-  transform:translateY(-6px);
+/* =========================
+   SMOOTH CARDS (FRAMER STYLE)
+========================= */
+
+.card, .project-card, .video-box {
+  transition: all 0.35s ease;
+  transform: translateY(0);
+  will-change: transform;
 }
 
-/* BUTTON */
-.btn{
-  background:linear-gradient(135deg,#22c55e,#16a34a);
-  padding:12px 20px;
-  border-radius:999px;
-  color:#000;
-  font-weight:600;
+.card:hover,
+.project-card:hover,
+.video-box:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
 }
 
-/* SKILLS FIX (NO OVERFLOW BUG) */
-.skill-track{
-  display:flex;
-  gap:15px;
-  overflow-x:auto;
+/* =========================
+   SKILLS FIX (IMPORTANT)
+   prevents mobile overflow + zoom glitch
+========================= */
+
+.skill-carousel {
+  overflow: hidden;
+  width: 100%;
 }
 
-.skill-track img{
-  width:75px;
-  height:75px;
-  border-radius:50%;
-  object-fit:cover;
+.skill-track {
+  display: flex;
+  gap: 12px;
+  animation: scroll 25s linear infinite;
+  width: max-content;
 }
 
-/* LIGHTBOX FIX */
-#lightbox{
-  position:fixed;
-  inset:0;
-  display:none;
-  justify-content:center;
-  align-items:center;
-  background:rgba(0,0,0,0.9);
+.skill-track img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
-/* MENU FIX */
-#navMenu.active{
-  display:flex;
-  flex-direction:column;
+.skill-track img:active {
+  transform: scale(1.2);
 }
 
-/* AI */
-.ai-btn{
-  position:fixed;
-  bottom:90px;
-  right:20px;
-  width:55px;
-  height:55px;
-  background:#22c55e;
-  border-radius:50%;
-  display:flex;
-  justify-content:center;
-  align-items:center;
+/* =========================
+   LIGHTBOX FIX (NO PAGE SHIFT)
+========================= */
+
+#lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.92);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
 }
 
-.ai-box{
-  position:fixed;
-  bottom:160px;
-  right:20px;
-  width:260px;
-  display:none;
-  flex-direction:column;
-  background:#111827;
-  border-radius:12px;
+/* =========================
+   MOBILE FIX (YOUR ISSUE)
+   removes right-side overflow
+========================= */
+
+* {
+  max-width: 100%;
+}
+
+.container {
+  overflow-x: hidden;
+}
+
+/* =========================
+   FLOAT AI BUTTON (MODERN GLOW)
+========================= */
+
+.ai-btn {
+  box-shadow: 0 0 20px rgba(34,197,94,0.5);
+  transition: transform 0.3s ease;
+}
+
+.ai-btn:hover {
+  transform: scale(1.1);
+}
+
+/* =========================
+   AI BOX IMPROVEMENT
+========================= */
+
+.ai-box {
+  border: 1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
 }
