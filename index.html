@@ -17,6 +17,9 @@
 
 <body>
 
+<!-- PAGE TRANSITION EFFECT -->
+<div class="page-loader"></div>
+
 <!-- HEADER -->
 <header>
   <div class="container header-container">
@@ -39,7 +42,7 @@
 </header>
 
 <!-- HERO -->
-<section class="hero container">
+<section class="hero container reveal">
   <div class="hero-text">
     <h2>Frontend Developer & Freelancer in Bangladesh</h2>
     <p>Building modern, fast and responsive websites.</p>
@@ -52,7 +55,7 @@
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="section container">
+<section id="about" class="section container reveal">
   <h2>About</h2>
   <div class="card">
     Developer & Mentor from Dhaka, Bangladesh.
@@ -60,7 +63,7 @@
 </section>
 
 <!-- SKILLS -->
-<section id="skills" class="section container">
+<section id="skills" class="section container reveal">
   <h2>Skills</h2>
 
   <div class="skill-track">
@@ -76,7 +79,7 @@
 </div>
 
 <!-- PROJECTS -->
-<section id="projects" class="section container">
+<section id="projects" class="section container reveal">
   <h2>Work</h2>
 
   <div class="card">Task Tracker</div>
@@ -84,7 +87,7 @@
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="section container">
+<section id="contact" class="section container reveal">
   <h2>Contact</h2>
 
   <div class="contact-grid">
@@ -94,8 +97,7 @@
 </section>
 
 <!-- CV -->
-<section id="cv" class="section container">
-  <h2>CV</h2>
+<section id="cv" class="section container reveal">
   <a class="btn" href="#">Download CV</a>
 </section>
 
@@ -113,10 +115,12 @@
 <script src="ai.js"></script>
 
 <script>
+/* MENU */
 function toggleMenu(){
   document.getElementById("navMenu").classList.toggle("active");
 }
 
+/* LIGHTBOX FIX */
 function openImage(img){
   document.body.style.overflow = "hidden";
   document.getElementById("lightbox").style.display = "flex";
@@ -128,10 +132,25 @@ function closeImage(){
   document.getElementById("lightbox").style.display = "none";
 }
 
+/* AI */
 function toggleAI(){
   const box = document.getElementById("aiBox");
   box.style.display = (box.style.display === "flex") ? "none" : "flex";
 }
+
+/* FRAMER STYLE SCROLL ANIMATION */
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add("show");
+    }
+  });
+});
+
+document.querySelectorAll(".reveal").forEach(el=>{
+  el.classList.add("hidden");
+  observer.observe(el);
+});
 </script>
 
 </body>
