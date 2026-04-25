@@ -296,6 +296,23 @@ nav ul li a:hover{
   width:100%;
 }
 
+.ai-hints{
+  padding:10px;
+  font-size:12px;
+  opacity:0.8;
+}
+
+.ai-hints button{
+  margin:5px 3px;
+  padding:5px 8px;
+  font-size:12px;
+  border:none;
+  border-radius:5px;
+  cursor:pointer;
+  background:#38bdf8;
+  color:#000;
+}
+
 /* =====================
    ANIMATION
 ===================== */
