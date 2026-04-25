@@ -118,31 +118,19 @@
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="section container reveal">
-  <h2>Contact</h2>
-
-  <div class="contact-icon-grid">
-
-    <a href="mailto:shadidahamed.matashome05m@gmail.com">
-      <i class="fa-solid fa-envelope"></i>
-      <span>Email</span>
-    </a>
-
-    <a href="https://github.com/shadidahamed">
-      <i class="fa-brands fa-github"></i>
-      <span>GitHub</span>
-    </a>
-
-    <a href="https://www.linkedin.com/in/shadid-ahamed-41a0703b2/">
-      <i class="fa-brands fa-linkedin"></i>
-      <span>LinkedIn</span>
-    </a>
-
-    <a href="https://wa.me/8801326162684">
-      <i class="fa-brands fa-whatsapp"></i>
-      <span>WhatsApp</span>
-    </a>
-
+<section id="contact" class="section container"> 
+  <h2>Contact & Business Links</h2>
+  <div class="contact-box-grid"> 
+    <a href="mailto:shadidahamed.matashome05m@gmail.com">Email</a>
+    <a href="https://github.com/shadidahamed">GitHub</a> 
+    <a href="https://www.linkedin.com/in/shadid-ahamed-41a0703b2/">LinkedIn</a> 
+    <a href="https://www.instagram.com/shade_ed25">Instagram</a> 
+    <a href="https://www.facebook.com/share/1C2KcQfwvn/">Facebook</a> 
+    <a href="https://wa.me/8801326162684">WhatsApp</a>
+    <a href="https://x.com/ShadidAhamed">X (Twitter)</a>
+    <a href="https://pin.it/4Z5y34R2T">Pinterest</a>
+    <a href="https://www.reddit.com/user/Shade_ed25">Reddit</a> 
+    <a href="https://www.tumblr.com/">Tumblr</a> 
   </div>
 </section>
 
@@ -151,6 +139,13 @@
   <img id="lightbox-img">
 </div>
 
+<!-- CV --> 
+  <section id="cv" class="section container center">
+    <h2>Resume & Professional Profile</h2> 
+    <p>Download my CV to view detailed education, skills and project experience.</p>
+    <a href="https://linksharing.samsungcloud.com/ydyQQMfhxn3R" class="btn">Download CV</a>
+  </section>
+  
 <!-- SCRIPTS -->
 <script>
 function toggleAI(){
@@ -158,6 +153,7 @@ function toggleAI(){
   box.style.display = (box.style.display === "flex") ? "none" : "flex";
 }
 
+/* KEEP YOUR ORIGINAL FUNCTIONS */
 function openImage(img){
   document.getElementById("lightbox").style.display = "flex";
   document.getElementById("lightbox-img").src = img.src;
@@ -180,6 +176,31 @@ document.querySelectorAll(".reveal").forEach(el=>{
   el.classList.add("hidden");
   observer.observe(el);
 });
+</script>
+
+<!-- EXTRA AI SYSTEM (ADDED EXACTLY AS REQUESTED) -->
+<script>
+function toggleMenu(){
+  document.getElementById("navMenu").classList.toggle("active");
+}
+
+function handleAI(event){
+  if(event.key === "Enter"){
+    let input = document.getElementById("aiInput");
+    let msgBox = document.getElementById("aiMessages");
+
+    let userMsg = document.createElement("div");
+    userMsg.innerText = "You: " + input.value;
+    msgBox.appendChild(userMsg);
+
+    let botMsg = document.createElement("div");
+    botMsg.innerText = "AI: I am a simple assistant. You asked: " + input.value;
+    msgBox.appendChild(botMsg);
+
+    input.value = "";
+    msgBox.scrollTop = msgBox.scrollHeight;
+  }
+}
 </script>
 
 </body>
