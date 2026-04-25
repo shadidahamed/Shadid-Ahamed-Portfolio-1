@@ -1,220 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shadid Ahamed Portfolio</title>
 
-<title>Shadid Ahamed Portfolio</title>
-
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<link rel="icon" href="image/portfolio link favicon.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="icon" href="image/portfolio link favicon.png">
 </head>
-
 <body>
 
-<!-- AI Button -->
-<div class="ai-btn">🤖</div>
+  <!-- AI Button -->
+  <div class="ai-btn">🤖</div>
 
-<!-- AI Box -->
-<div id="aiBox">
-  <div class="ai-header">
-    <span>Portfolio AI Assistant</span>
-    <button class="close-btn">✕</button>
-  </div>
-  
-  <div id="aiMessages"></div>
-  
-  <div id="aiInputContainer">
-    <input type="text" id="aiInput" placeholder="Ask me anything...">
-  </div>
-  
-  <div class="ai-hints">
-    <!-- Optional quick buttons -->
-  </div>
-</div>
-
-
-<!-- HEADER -->
-<header>
-  <div class="container header-container">
-    <h1 class="logo">Shadid<span>.</span></h1>
-
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#videos">Videos</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#cv" class="btn">CV</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-<!-- HERO -->
-<section class="hero container reveal">
-  <div class="hero-text">
-    <h2>Frontend Developer focused on building clean, fast and responsive web experiences</h2>
-    <p>Aspiring Developer • Problem Solver • UI Builder</p>
-    <a href="#projects" class="btn">View Work</a>
-  </div>
-
-  <div class="hero-image">
-    <img src="image/Heroimage.png" alt="">
-  </div>
-</section>
-
-<!-- SKILLS -->
-<section id="skills" class="section container reveal">
-  <h2>Skills</h2>
-
-  <div class="skill-carousel">
-    <div class="skill-track">
-
-      <img src="image/IMG scetch 1.jpg" onclick="openImage(this)">
-      <img src="image/image sketch 1.jpg" onclick="openImage(this)">
-      <img src="image/image sketch 2.jpg" onclick="openImage(this)">
-      <img src="image/image ipad 1.png" onclick="openImage(this)">
-      <img src="image/image colour 1.jpg" onclick="openImage(this)">
-      <img src="image/image pc 1.png" onclick="openImage(this)">
-      <img src="image/image sketch 3.jpg" onclick="openImage(this)">
-
-    </div>
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects" class="section container reveal">
-  <h2>Projects</h2>
-
-  <div class="grid-2">
-    <div class="project-card">
-      <h3>Task Tracker App</h3>
-      <p>Simple productivity tool</p>
+  <!-- AI Box -->
+  <div id="aiBox">
+    <div class="ai-header">
+      <span>Portfolio AI Assistant</span>
+      <button class="close-btn">✕</button>
     </div>
 
-    <div class="project-card">
-      <h3>E-commerce Website</h3>
-      <p>Modern UI shopping system</p>
-      <a href="https://shadidahamed.github.io/trendcart/" class="project-btn">Live</a>
+    <div id="aiMessages"></div>
+
+    <div id="aiInputContainer">
+      <input type="text" id="aiInput" placeholder="Ask me anything...">
     </div>
+
+    <div class="ai-hints"></div>
   </div>
-</section>
 
-<!-- VIDEOS -->
-<section id="videos" class="section container reveal">
-  <h2>Videos</h2>
-
-  <div class="video-box-grid">
-
-    <div class="video-box">
-      <h3>Video 1</h3>
-      <p>Project Demo</p>
-      <a href="https://youtu.be/MCj4pNiJR_Q?si=pOBr9xrs4MTIZYPS" target="_blank">Watch</a>
+  <!-- HEADER -->
+  <header>
+    <div class="container header-container">
+      <h1 class="logo">Shadid<span>.</span></h1>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#videos">Videos</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#cv" class="btn">CV</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
 
-    <div class="video-box">
-      <h3>Video 2</h3>
-      <p>Skill Showcase</p>
-      <a href="https://www.youtube.com/" target="_blank">Watch</a>
+  <!-- HERO -->
+  <section class="hero container reveal">
+    <div class="hero-text">
+      <h2>Frontend Developer focused on building clean, fast and responsive web experiences</h2>
+      <p>Aspiring Developer • Problem Solver • UI Builder</p>
+      <a href="#projects" class="btn">View Work</a>
     </div>
-
-    <div class="video-box">
-      <h3>Video 3</h3>
-      <p>Portfolio Tour</p>
-      <a href="https://www.youtube.com/" target="_blank">Watch</a>
+    <div class="hero-image">
+      <img src="image/Heroimage.png" alt="Shadid Ahamed">
     </div>
+  </section>
 
+  <!-- SKILLS -->
+  <section id="skills" class="section container reveal">
+    <h2>Skills</h2>
+    <div class="skill-carousel">
+      <div class="skill-track">
+        <img src="image/IMG scetch 1.jpg" onclick="openImage(this)" alt="Sketch 1">
+        <img src="image/image sketch 1.jpg" onclick="openImage(this)" alt="Sketch 1">
+        <img src="image/image sketch 2.jpg" onclick="openImage(this)" alt="Sketch 2">
+        <img src="image/image ipad 1.png" onclick="openImage(this)" alt="iPad Design">
+        <img src="image/image colour 1.jpg" onclick="openImage(this)" alt="Color Design">
+        <img src="image/image pc 1.png" onclick="openImage(this)" alt="PC Design">
+        <img src="image/image sketch 3.jpg" onclick="openImage(this)" alt="Sketch 3">
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section container reveal">
+    <h2>Projects</h2>
+    <div class="grid-2">
+      <div class="project-card">
+        <h3>Task Tracker App</h3>
+        <p>Simple productivity tool</p>
+      </div>
+      <div class="project-card">
+        <h3>E-commerce Website</h3>
+        <p>Modern UI shopping system</p>
+        <a href="https://shadidahamed.github.io/trendcart/" class="project-btn" target="_blank">Live</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEOS -->
+  <section id="videos" class="section container reveal">
+    <h2>Videos</h2>
+    <div class="video-box-grid">
+      <div class="video-box">
+        <h3>Video 1</h3>
+        <p>Project Demo</p>
+        <a href="https://youtu.be/MCj4pNiJR_Q?si=pOBr9xrs4MTIZYPS" target="_blank">Watch</a>
+      </div>
+      <div class="video-box">
+        <h3>Video 2</h3>
+        <p>Skill Showcase</p>
+        <a href="https://www.youtube.com/" target="_blank">Watch</a>
+      </div>
+      <div class="video-box">
+        <h3>Video 3</h3>
+        <p>Portfolio Tour</p>
+        <a href="https://www.youtube.com/" target="_blank">Watch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section container"> 
+    <h2>Contact & Business Links</h2>
+    <div class="contact-box-grid"> 
+      <a href="mailto:shadidahamed.matashome05m@gmail.com">Email</a>
+      <a href="https://github.com/shadidahamed">GitHub</a> 
+      <a href="https://www.linkedin.com/in/shadid-ahamed-41a0703b2/">LinkedIn</a> 
+      <a href="https://www.instagram.com/shade_ed25">Instagram</a> 
+      <a href="https://www.facebook.com/share/1C2KcQfwvn/">Facebook</a> 
+      <a href="https://wa.me/8801326162684">WhatsApp</a>
+      <a href="https://x.com/ShadidAhamed">X (Twitter)</a>
+      <a href="https://pin.it/4Z5y34R2T">Pinterest</a>
+      <a href="https://www.reddit.com/user/Shade_ed25">Reddit</a> 
+      <a href="https://www.tumblr.com/">Tumblr</a> 
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" onclick="closeImage()">
+    <img id="lightbox-img">
   </div>
-</section>
 
-<!-- CONTACT -->
-<section id="contact" class="section container"> 
-  <h2>Contact & Business Links</h2>
-  <div class="contact-box-grid"> 
-    <a href="mailto:shadidahamed.matashome05m@gmail.com">Email</a>
-    <a href="https://github.com/shadidahamed">GitHub</a> 
-    <a href="https://www.linkedin.com/in/shadid-ahamed-41a0703b2/">LinkedIn</a> 
-    <a href="https://www.instagram.com/shade_ed25">Instagram</a> 
-    <a href="https://www.facebook.com/share/1C2KcQfwvn/">Facebook</a> 
-    <a href="https://wa.me/8801326162684">WhatsApp</a>
-    <a href="https://x.com/ShadidAhamed">X (Twitter)</a>
-    <a href="https://pin.it/4Z5y34R2T">Pinterest</a>
-    <a href="https://www.reddit.com/user/Shade_ed25">Reddit</a> 
-    <a href="https://www.tumblr.com/">Tumblr</a> 
-  </div>
-</section>
-
-<!-- LIGHTBOX -->
-<div id="lightbox" onclick="closeImage()">
-  <img id="lightbox-img">
-</div>
-
-<!-- CV --> 
+  <!-- CV --> 
   <section id="cv" class="section container center">
     <h2>Resume & Professional Profile</h2> 
     <p>Download my CV to view detailed education, skills and project experience.</p>
-    <a href="https://drive.google.com/file/d/1xvluu5Muh8olsWQYBxyADMMFhm1w3SdM/view?usp=drivesdk" class="btn">Download CV</a>
+    <a href="https://drive.google.com/file/d/1xvluu5Muh8olsWQYBxyADMMFhm1w3SdM/view?usp=drivesdk" class="btn" target="_blank">Download CV</a>
   </section>
-  
-<!-- SCRIPTS -->
-<script>
-function toggleAI(){
-  const box = document.getElementById("aiBox");
-  box.style.display = (box.style.display === "flex") ? "none" : "flex";
-}
 
-/* KEEP YOUR ORIGINAL FUNCTIONS */
-function openImage(img){
-  document.getElementById("lightbox").style.display = "flex";
-  document.getElementById("lightbox-img").src = img.src;
-}
-
-function closeImage(){
-  document.getElementById("lightbox").style.display = "none";
-}
-
-/* SAFE REVEAL SYSTEM */
-const observer = new IntersectionObserver(entries=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting){
-      e.target.classList.add("show");
-    }
-  });
-});
-
-document.querySelectorAll(".reveal").forEach(el=>{
-  el.classList.add("hidden");
-  observer.observe(el);
-});
-</script>
-
-<!-- EXTRA AI SYSTEM (ADDED EXACTLY AS REQUESTED) -->
-<script>
-function toggleMenu(){
-  document.getElementById("navMenu").classList.toggle("active");
-}
-
-function handleAI(event){
-  if(event.key === "Enter"){
-    let input = document.getElementById("aiInput");
-    let msgBox = document.getElementById("aiMessages");
-
-    let userMsg = document.createElement("div");
-    userMsg.innerText = "You: " + input.value;
-    msgBox.appendChild(userMsg);
-
-    let botMsg = document.createElement("div");
-    botMsg.innerText = "AI: I am a simple assistant. You asked: " + input.value;
-    msgBox.appendChild(botMsg);
-
-    input.value = "";
-    msgBox.scrollTop = msgBox.scrollHeight;
-  }
-}
-</script>
-
+  <script src="script.js"></script>
 </body>
 </html>
